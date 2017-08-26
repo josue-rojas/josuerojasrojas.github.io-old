@@ -7,6 +7,7 @@ title: readme
 ## TODO (list for myself)
 - update this readme (forever)
 - continue design for default page
+- update assets to be more universal they do not work for deeper folders
 - navBar
   - __make icons for navbar__ (currently working on might take a while since this has to be original)
     - hover and active should be different
@@ -22,8 +23,9 @@ title: readme
   - should be better styled
 - make script to scrape github pages to get content (also currently working on this)
   - ~~use github api just to make things easier~~ done
-  - organize data into json object and write it out
-  - might move script to data folder to easily write files in right place
+  - ~~organize data into json object and write it out~~ done
+  - use the data as content
+  - ~~might move script to data folder to easily write files in right place~~ done
 
 ### Resource i used (websites and stuff)
 (there might have been more but sometimes i do not keep track of everything)
