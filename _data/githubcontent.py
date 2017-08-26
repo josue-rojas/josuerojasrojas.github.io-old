@@ -2,24 +2,6 @@ from __future__ import division
 import requests, json, os
 '''
 this is to automate getting content for my portfolio from github
-it will create a json file like:
-{
-'github':{
-    'languages':...;
-    'repoos':{
-        'example':{
-            'language':'java';,
-            'summary': 'chickennuggets and stuff',
-            'created':'yesterday'
-            },
-        'example2':{
-            'language':'java';,
-            'summary':'eggs and stuff',
-            'create':'june 2015'
-            }
-        }
-    }
-}
 # end points useful to me
 # curl -X GET https://api.github.com/users/josuerojasrojas/repos
 # get the avatar to automate updates
@@ -32,6 +14,7 @@ it will create a json file like:
 '''
 
 # user = requests.get('https://api.github.com/users/josuerojasrojas').json()
+# need to fix authentication or maybe i passed my limits.....
 repos = requests.get('https://api.github.com/users/josuerojasrojas/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
 allLanguages = set([])
 
@@ -86,5 +69,7 @@ def main():
     repoNames, htmlURL, repoDesc, createAt, languages = getInfo()
     with open('data.json','w') as jsonfile:
         json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages), jsonfile)
+    os.chdir(os.getcwd())
+    os.system('cd '+ os.getcwd()+ '; json2yaml data.json > data.yml') #it's easier to use so i've heard, plus it looks pretty
 
 main()
