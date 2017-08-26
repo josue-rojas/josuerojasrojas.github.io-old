@@ -12,7 +12,7 @@ title: readme
 
 ### Resource i used (websites and stuff)
 (there might have been more but sometimes i do not keep track of everything)
-- https://jekyllrb.com/docs/structure/
-- http://jmcglone.com/guides/github-pages/
+- [Jekyll Structures](https://jekyllrb.com/docs/structure/)
+- [Tutorial for basic start](http://jmcglone.com/guides/github-pages/)
 
 __(!idea maybe have a script to log all websites....)__
