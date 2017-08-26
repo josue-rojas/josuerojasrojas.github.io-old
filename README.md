@@ -21,10 +21,15 @@ title: readme
   - should have readme link on what i am currently working on
 - 404
   - should be better styled
-- make script to scrape github pages to get content (also currently working on this)
+- main page
+  - style
+  - filter
+    - submenu buttons should filter results
+  - maybe add images of projects (easy peasy)
+- ~~make script to scrape github pages to get content (also currently working on this)~~ done
   - ~~use github api just to make things easier~~ done
   - ~~organize data into json object and write it out~~ done
-  - use the data as content
+  - ~~use the data as content~~ done
   - ~~might move script to data folder to easily write files in right place~~ done
 
 ### Resource i used (websites and stuff)
@@ -32,5 +37,6 @@ title: readme
 - [Jekyll Structures](https://jekyllrb.com/docs/structure/)
 - [Tutorial for basic start](http://jmcglone.com/guides/github-pages/)
 - [CoffeeScript on Jekyll](http://www.mattjmorrison.com/today-i-learned/2014/10/10/learned.html)
+- [json to yaml](https://www.npmjs.com/package/json2yaml)
 
 __(!idea maybe have a script to log all websites....)__
