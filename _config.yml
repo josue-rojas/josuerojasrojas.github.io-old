@@ -3,4 +3,4 @@ markdown: kramdown
 plugins:
   - jekyll-coffeescript
 exclude:
-  - scripts/
+  - data/githubusercontent.py

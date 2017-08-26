@@ -1,5 +1,5 @@
 from __future__ import division
-import requests
+import requests, json, os
 '''
 this is to automate getting content for my portfolio from github
 it will create a json file like:
@@ -29,11 +29,10 @@ it will create a json file like:
 # get created_at
 # get language
 # ge languages_url better language from this compile a list of languages
-
 '''
 
 # user = requests.get('https://api.github.com/users/josuerojasrojas').json()
-repos = requests.get('https://api.github.com/users/josuerojasrojas/repos').json()
+repos = requests.get('https://api.github.com/users/josuerojasrojas/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
 allLanguages = set([])
 
 def getAvatar():
@@ -77,14 +76,15 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, allLanguages
         'languages': languages[i]
         })
     dataJson = {
-        'avatar_url': getAvatar()
-        'languages':list(allLanguages)
+        'avatar_url': getAvatar(),
+        'languages':list(allLanguages),
         'repos': repoJson
     }
-    return repoJson
+    return dataJson
 
 def main():
     repoNames, htmlURL, repoDesc, createAt, languages = getInfo()
-    print organizeData(repoNames, htmlURL, repoDesc, createAt, languages)
+    with open('data.json','w') as jsonfile:
+        json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages), jsonfile)
 
 main()
