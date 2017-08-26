@@ -1,4 +1,6 @@
 name: Josue Rojas' Portfolio
 markdown: kramdown
 plugins:
- - jekyll-coffeescript
+  - jekyll-coffeescript
+exclude:
+  - scripts/
