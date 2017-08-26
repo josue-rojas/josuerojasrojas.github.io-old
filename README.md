@@ -1,7 +1,7 @@
 ---
 # for routes in portfolio
 layout: default
-permalink: /README
+permalink: /readme
 title: readme
 ---
 ## TODO (list for myself)
