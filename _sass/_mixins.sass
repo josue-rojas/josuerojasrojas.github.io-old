@@ -1,0 +1,110 @@
+// Adds vendor prefixes to a property, ex: '-ms-border-radius'.
+//
+// $property - Property to prefix
+// $value - value to assign to the property
+// $prefixes - (optional) - prefixes to apply
+// Style guide: styles-1.0
+=prefix($property, $value...)
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, ""
+    #{$prefix}#{$property}: $value
+
+// Adds value prefixes to a property, ex: 'display: -webkit-flex'.
+//
+// $property - Property to add values to
+// $value - prefixed value to assign to the property
+// $prefixes - (optional) - prefixes to apply
+// Style guide: styles-1.0
+=prefix-value($property, $value, $prefixes: webkit ms moz)
+  @each $prefix in $prefixes
+    #{$property}: #{'-' + $prefix + '-' + $value}
+  #{$property}: #{$value}
+
+=hide-text
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+
+// Adds a min-width media query.
+// $pixels
+=min-width($pixels)
+  @media (min-width: $pixels)
+    @content
+
+// $pixels
+=max-width($pixels)
+  @media (max-width: $pixels)
+    @content
+
+// Media queries for defined breakpoints.
+=wide-mobile
+  +min-width($wide-mobile)
+    @content
+
+=narrow-desktop
+  +min-width($narrow-desktop)
+    @content
+
+=max-mobile
+  +min-width($max-mobile-content-width)
+    @content
+
+=small-desktop
+  +min-width($small-desktop)
+    @content
+
+=wide-desktop
+  +min-width($wide-desktop)
+    @content
+
+=wide-component
+  +min-width($narrow-desktop)
+    @content
+
+=narrow-desktop-only
+  @media (min-width: $narrow-desktop) and (max-width: $wide-desktop)
+    @content
+
+// Adds a clearfix to an element.
+=clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+=overlay
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  position: absolute
+
+// Adds text overflow ellipsis.
+=ellipsis
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+// Background opacity
+=background-opacity($color: $black, $opacity: 0.8)
+  background: $color
+  background: rgba($color, $opacity)
+
+// Keyframes
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @-o-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+// Return a fraction as a width %.
+=fraction($numerator, $denominator)
+  width: $numerator/$denominator * 100%
+
+// Stop the clicks!
+=no-clicks
+  .no-clicks
+    pointer-events: none
