@@ -15,6 +15,8 @@ title: readme
     - should hide when it is mobile and have a button to make it appear
     - from tablet and higher it should look regular
 - footer
+  - contact link
+  - about me link?
   - should have readme link on what i am currently working on
 - 404
   - should be better styled

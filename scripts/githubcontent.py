@@ -41,7 +41,6 @@ def getAvatar():
 
 def languagePercent(langs):
     total = 0
-    print langs
     for language in langs.keys():
         total+= langs[language]
         allLanguages.add(language) #this should be more locally scope but this works fine for now
@@ -63,9 +62,29 @@ def getInfo():
         repoDesc.append(repo['description'] if repo['description'] else '')
         createAt.append(repo['created_at'] if repo['created_at'] else '')
         languages.append(languagePercent(requests.get(repo['languages_url']).json()) if repo['languages_url'] else [])
-    print allLanguages
     return repoNames, htmlURL, repoDesc, createAt, languages
 
+# this returns a json object (how i wanted)
+# getInfo() should be run first to get allLanguages
+def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, allLanguages=allLanguages):
+    # make each repo json
+    repoJson = []
+    for i in range(len(repoNames)):
+        repoJson.append({
+        'repo_name': repoNames[i],
+        'url': htmlURL[i],
+        'description': repoDesc[i],
+        'languages': languages[i]
+        })
+    dataJson = {
+        'avatar_url': getAvatar()
+        'languages':list(allLanguages)
+        'repos': repoJson
+    }
+    return repoJson
+
 def main():
-    print getInfo()
+    repoNames, htmlURL, repoDesc, createAt, languages = getInfo()
+    print organizeData(repoNames, htmlURL, repoDesc, createAt, languages)
+
 main()
