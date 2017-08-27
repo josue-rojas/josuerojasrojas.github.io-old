@@ -6,14 +6,22 @@ title: Portfolio Home
 	<ul>
 		{% for language in site.data.data.languages %}
 		<li>
-				<div class='{{ language }}' onclick='filterLanguage({{ language }})'></div>
+				<div class='{{ language }}' onclick='filterLanguage("{{ language }}")'></div>
 		</li>
 		{% endfor %}
 	</ul>
 </div>
+
 <div class="main">
 	{% for repo in site.data.data.repos %}
 	<div class='repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+		{% for language in repo.languages %}
+		<div class='language'>
+			<div class='{{ language[0] }}'>
+		</div>
+	</div>
+
+		{% endfor %}
 		<p>{{ repo.repo_name }}
 			<br>
 		{{ repo.description }}
