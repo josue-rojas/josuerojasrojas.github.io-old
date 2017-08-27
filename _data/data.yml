@@ -4,6 +4,7 @@
     - "Java"
     - "Python"
     - "JavaScript"
+    - "CoffeeScript"
     - "HTML"
     - "CSS"
   repos: 
@@ -53,6 +54,15 @@
         CSS: 22.892033339794533
       description: "day 3"
       repo_name: "GoodCause"
+    - 
+      url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
+      languages: 
+        Python: 28.515830440727886
+        CoffeeScript: 1.9354160092563375
+        HTML: 28.547386136530978
+        CSS: 41.0013674134848
+      description: "this is my portfolio in GitHub pages"
+      repo_name: "josuerojasrojas.github.io"
     - 
       url: "https://github.com/josuerojasrojas/JukeBox"
       languages: 
