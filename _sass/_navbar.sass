@@ -59,12 +59,52 @@
     background-color: #244776
     &:hover
       background-color: #16355e
+  //rainbow circle
+  //https://codepen.io/nohoid/pen/kIfto source partial
+  .rainbow-circle
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #dd00f3, #2b1de8, #1ddde8, #1de840, #e3e81d, #e8b71d, #e81d1d, #ff2400)
+    background-size: 3000% 100%
+    +prefix(animation, rainbow 20s ease infinite)
+
 //this is an exeption to the rule (it's not a nav)
 .language
   display: inline
   span
     display: inline-block
-    width: 15px
-    height: 15px
-    margin: 5px
+    width: 10px
+    height: 10px
+    margin: 2px
     border-radius: 50%
+
+//rainbow animation for some browsers
+@-webkit-keyframes rainbow
+    0%
+      background-position: 0% 82%
+    50%
+      background-position: 100% 19%
+    100%
+      background-position: 0% 82%
+
+@-moz-keyframes rainbow
+    0%
+      background-position: 0% 82%
+    50%
+      background-position: 100% 19%
+    100%
+      background-position: 0% 82%
+
+@-o-keyframes rainbow
+    0%
+      background-position: 0% 82%
+    50%
+      background-position: 100% 19%
+    100%
+      background-position: 0% 82%
+
+@keyframes rainbow
+    0%
+      background-position: 0% 82%
+    50%
+      background-position: 100% 19%
+    100%
+      background-position: 0% 82%

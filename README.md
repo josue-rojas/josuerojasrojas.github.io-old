@@ -25,11 +25,15 @@ title: readme
   - center 404
 - main page
   - style
-    - seperate content into boxed
+    - ~~seperate content into boxed~~ partially done
+      - make all boxes same height
+      - hide description if it doesn't fit and add a show more toggle
+    - align boxes in the middle
+    - change color scheme
   - filter
     - need their own icon that clearly shows what it is
     - ~~submenu buttons should filter results~~ done?
-      - add show all
+      - ~~add show all~~ done
       - add sort by name, data, etc
   - maybe add images of projects (easy peasy)
     - to make it easy all information would be stored in their respective github
@@ -39,12 +43,16 @@ title: readme
   - ~~use the data as content~~ done
   - ~~might move script to data folder to easily write files in right place~~ done
   - scrape preview image link (after you add them)
+  - get project link if there is one
+  - get commits from this project (will be on readme or some other link rendered somewhere else)
 
 ### Resource i used (websites and stuff)
 (there might have been more but sometimes i do not keep track of everything)
+- [important to know how to use](http://google.com/)
 - [Jekyll Structures](https://jekyllrb.com/docs/structure/)
 - [Tutorial for basic start](http://jmcglone.com/guides/github-pages/)
 - [CoffeeScript on Jekyll](http://www.mattjmorrison.com/today-i-learned/2014/10/10/learned.html)
 - [json to yaml](https://www.npmjs.com/package/json2yaml)
 - [github colors](https://github.com/ozh/github-colors/blob/master/colors.json)
+
 __(!idea maybe have a script to log all websites....)__

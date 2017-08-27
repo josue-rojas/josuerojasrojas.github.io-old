@@ -4,6 +4,9 @@ title: Portfolio Home
 ---
 <div class='submenu navbar'>
 	<ul>
+		<li>
+			<div class='rainbow-circle' onclick='filterLanguage("repo")'></div>
+		</li>
 		{% for language in site.data.data.languages %}
 		<li>
 			<div class='{{ language }}' onclick='filterLanguage("{{ language }}")'></div>
