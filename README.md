@@ -10,7 +10,7 @@ title: readme
 - update assets to be more universal they do not work for deeper folders
 - need better fonts (google fonts?)
 - navBar
-  - __make icons for navbar__ (currently working on might take a while since this has to be original)
+  - __make icons for navbar__ (this might take a while)
     - hover and active should be different
     - should also be updated according to data(but that is later)
   - make navbar responsive
@@ -24,6 +24,10 @@ title: readme
   - should be better styled
   - center 404
 - main page
+  - should be about me
+  - interest
+- ~~main page~~ projects page
+  - __change this to projects page__
   - style
     - ~~seperate content into boxed~~ partially done
       - make all boxes same height
@@ -43,7 +47,7 @@ title: readme
   - ~~use the data as content~~ done
   - ~~might move script to data folder to easily write files in right place~~ done
   - scrape preview image link (after you add them)
-  - get project link if there is one
+  - ~~get project link if there is one~~
   - get commits from this project (will be on readme or some other link rendered somewhere else)
 
 ### Resource i used (websites and stuff)

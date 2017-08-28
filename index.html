@@ -25,11 +25,15 @@ title: Portfolio Home
 		</div>
 		{% endfor %}
 		<div class='content'>
-			<p>{{ repo.repo_name }}
+			<p><b>{{ repo.repo_name }}</b>
 				<br>
 				{{ repo.description }}
 				<br>
-				<a href='{{repo.url}}'>Github Source</a>
+				<a href='{{repo.url}}'>Github</a>
+				{% if repo.projectLink != "" %}
+				<br>
+				<a href='{{repo.projectLink}}'>Projec Link</a>
+				{% endif %}
 			</p>
 		</div>
 	</div>

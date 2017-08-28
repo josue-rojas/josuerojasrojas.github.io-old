@@ -1,7 +1,6 @@
 from __future__ import division
 import requests, json, os
 '''
-this is to automate getting content for my portfolio from github
 # end points useful to me
 # curl -X GET https://api.github.com/users/josuerojasrojas/repos
 # get the avatar to automate updates
@@ -12,9 +11,6 @@ this is to automate getting content for my portfolio from github
 # get language
 # ge languages_url better language from this compile a list of languages
 '''
-
-# user = requests.get('https://api.github.com/users/josuerojasrojas').json()
-# need to fix authentication or maybe i passed my limits.....
 repos = requests.get('https://api.github.com/users/josuerojasrojas/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
 allLanguages = set([])
 
@@ -38,17 +34,19 @@ def getInfo():
     repoDesc = []
     createAt = []
     languages = []
+    projectLink = []
     for repo in repos:
         repoNames.append(repo['name'] if repo['name'] else '')
         htmlURL.append(repo['html_url'] if repo['html_url'] else '')
         repoDesc.append(repo['description'] if repo['description'] else '')
         createAt.append(repo['created_at'] if repo['created_at'] else '')
-        languages.append(languagePercent(requests.get(repo['languages_url']).json()) if repo['languages_url'] else [])
-    return repoNames, htmlURL, repoDesc, createAt, languages
+        languages.append(languagePercent(requests.get(repo['languages_url'],auth=('josuerojasrojas',os.environ['gittoken'])).json()) if repo['languages_url'] else [])
+        projectLink.append(repo['homepage'] if repo['homepage'] else '')
+    return repoNames, htmlURL, repoDesc, createAt, languages, projectLink
 
 # this returns a json object (how i wanted)
 # getInfo() should be run first to get allLanguages
-def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, allLanguages=allLanguages):
+def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink, allLanguages=allLanguages):
     # make each repo json
     repoJson = []
     for i in range(len(repoNames)):
@@ -56,7 +54,9 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, allLanguages
         'repo_name': repoNames[i],
         'url': htmlURL[i],
         'description': repoDesc[i],
-        'languages': languages[i]
+        'languages': languages[i],
+        'created': createAt[i],
+        'projectLink': projectLink[i]
         })
     dataJson = {
         'avatar_url': getAvatar(),
@@ -66,9 +66,9 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, allLanguages
     return dataJson
 
 def main():
-    repoNames, htmlURL, repoDesc, createAt, languages = getInfo()
+    repoNames, htmlURL, repoDesc, createAt, languages, projectLink = getInfo()
     with open('data.json','w') as jsonfile:
-        json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages), jsonfile)
+        json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink), jsonfile)
     os.chdir(os.getcwd())
     os.system('cd '+ os.getcwd()+ '; json2yaml data.json > data.yml') #it's easier to use so i've heard, plus it looks pretty
 
