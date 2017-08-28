@@ -4,13 +4,9 @@ title: Portfolio Home
 ---
 <div class='submenu navbar'>
 	<ul>
-		<li>
-			<div class='rainbow-circle' onclick='filterLanguage("repo")'></div>
-		</li>
+		<li class='rainbow-circle' onclick='filterLanguage("repo")'></li>
 		{% for language in site.data.data.languages %}
-		<li>
-			<div class='{{ language }}' onclick='filterLanguage("{{ language }}")'></div>
-		</li>
+		<li class='{{ language }}' onclick='filterLanguage("{{language}}")'></li>
 		{% endfor %}
 	</ul>
 </div>
@@ -20,7 +16,7 @@ title: Portfolio Home
 	<div class='repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
 		<div class='languages'>
 		{% for language in repo.languages %}
-		<div class='language'>
+		<div class='language {{ language[0] }}-Order'>
 			<span class='{{ language[0] }}'>
 			</span>
 		</div>

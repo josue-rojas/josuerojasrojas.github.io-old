@@ -28,7 +28,9 @@
 
 
 .submenu, .language
-  div
+  ul
+    display: flex
+  div, li
     width: 40px
     height: 40px
     margin: 5px
@@ -71,6 +73,12 @@
 //this is an exeption to the rule (it's not a nav)
 .language
   display: inline
+  div
+    display: inline-block
+    width: 10px
+    height: 10px
+    margin: 2px
+    border-radius: 50%
   span
     display: inline-block
     width: 10px
@@ -86,3 +94,21 @@
       background-position: 100% 19%
     100%
       background-position: 0% 82%
+
+//orders
+.Shell, .Shell-Order
+  order: 3
+.Java, .Java-Order
+  order: 8
+.Python, .Python-Order
+  order: 4
+.JavaScript, .JavaScript-Order
+  order: 2
+.HTML, .HTML-Order
+  order: 7
+.CSS, .CSS-Order
+  order: 6
+.CoffeeScript, .CoffeeScript-Order
+  order: 5
+.rainbow-circle, .rainbow-circle-Order
+  order: 1

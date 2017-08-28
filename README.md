@@ -33,7 +33,9 @@ title: readme
       - make all boxes same height
       - hide description if it doesn't fit and add a show more toggle
     - align boxes in the middle
-    - change color scheme
+    - ~~change color scheme~~ done but need opinion of others
+    - text overflow problem with long titles ie. Migration_of_Language_and_Income
+    - make title a bit bigger (again text overflow problem might occur worse)
   - filter
     - need their own icon that clearly shows what it is
     - ~~submenu buttons should filter results~~ done?
@@ -49,7 +51,10 @@ title: readme
   - scrape preview image link (after you add them)
   - ~~get project link if there is one~~
   - get commits from this project (will be on readme or some other link rendered somewhere else)
-
+  - might change boxes to a bit lighter color like #100f10
+- test
+  - display flex should have prefix???
+    - test in different browsers or online if prefix is needed
 ### Resource i used (websites and stuff)
 (there might have been more but sometimes i do not keep track of everything)
 - [important to know how to use](http://google.com/)
