@@ -1,11 +1,12 @@
 //this sass is for navigation bar and sub navs
 
 .navbar, .submenu
-  background-color: black
+  background-color: $darker-color
   width: 100vw
   display: flex
   flex-direction: column
   justify-content: center
+  padding: 0px
   ul
     overflow: hidden
     list-style-type: none
@@ -16,13 +17,14 @@
     float: left
     color: white
   li a
+    border-radius: 5px
     display: block
     color: white
     padding: 8px 16px
     text-decoration: none
     text-align: center
     &:hover
-      background-color: #555
+      color: $light-color
 
 
 .submenu, .language
@@ -76,32 +78,8 @@
     margin: 2px
     border-radius: 50%
 
-//rainbow animation for some browsers
-@-webkit-keyframes rainbow
-    0%
-      background-position: 0% 82%
-    50%
-      background-position: 100% 19%
-    100%
-      background-position: 0% 82%
-
-@-moz-keyframes rainbow
-    0%
-      background-position: 0% 82%
-    50%
-      background-position: 100% 19%
-    100%
-      background-position: 0% 82%
-
-@-o-keyframes rainbow
-    0%
-      background-position: 0% 82%
-    50%
-      background-position: 100% 19%
-    100%
-      background-position: 0% 82%
-
-@keyframes rainbow
+//rainbow animation
++keyframes(rainbow)
     0%
       background-position: 0% 82%
     50%

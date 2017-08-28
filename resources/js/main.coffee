@@ -1,9 +1,15 @@
 ---
 ---
+# need to find a smoother way to fade in and out
 window.filterLanguage = (language) ->
-  for repo in $('.repo')
-    $(repo).hide(300)
-    if $(repo).hasClass(language)
-      $(repo).show(500)
+  repos = $('.repo')
+  i = 0
+  last = repos.length
+  for repo in repos
+    i++
+    if i == last
+      $(repo).fadeOut(200,->
+        $('.repo.'+language).fadeIn(600)
+      )
     else
-      $(repo).hide(500)
+      $(repo).fadeOut(200)

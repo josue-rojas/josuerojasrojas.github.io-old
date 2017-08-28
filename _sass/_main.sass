@@ -2,15 +2,22 @@
 .main
   margin: 10px
 .repo
-  background-color: white
+  background-color: $darker-color
   width: 100%
   margin: 10px 0
   +max-mobile
     width: 20%
     margin: 10px
   display: inline-block
-  border: 1px solid black
+  border: 1px solid $medium-color
   padding: 1px
   border-radius: 5px
   .content
-    margin: 0
+    margin: 0 10px 10px 10px
+  .languages
+    margin-left: 10px
+    +max-mobile
+      display: flex
+      justify-content: center
+  .title
+    text-align: center
