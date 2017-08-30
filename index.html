@@ -10,8 +10,7 @@ title: Portfolio Home
 		{% endfor %}
 	</ul>
 </div>
-
-<div class="main">
+<div class="main filter">
 	{% for repo in site.data.data.repos %}
 	{% assign whichColumn = forloop.index0 | modulo:3 %}
 	{% if whichColumn == 0 %}
@@ -106,3 +105,14 @@ title: Portfolio Home
 	{% endfor%}
 
 </div>
+
+<!--
+this is to hold and neatly display when a filter is on. it goes from
+if filter from all and first -> filterTemp1 show
+if filter from filterTemp1 -> filterTemp2 show
+if filter from filterTemp2 -> filterTemp1 show
+if show all from filterTemp1 or filterTemp2 -> main show
+Should just use one!!!!! will change later
+ -->
+<div class='filterTemp1 main'></div>
+<div class='filterTemp2 main'></div>
