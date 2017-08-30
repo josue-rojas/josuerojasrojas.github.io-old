@@ -6,25 +6,22 @@ isMobile = ->
   return $('.mobilecheck').css('display')=='none'
 
 
-filterFilled = '.filterTemp2'
+displayOn = '.main.filter' # holds which filter is on
 
-# should reduce this to have only one temp instead of swithing back and forth
+# filter for languages
 window.filterLanguage = (language) ->
   # show all
   if language == 'repo'
-    $('.main').fadeOut(400, ->
-      $('.main.filter').fadeIn(500)
+    $(displayOn).fadeOut(300, ->
+      $('.main.filter').fadeIn(400)
+      displayOn = '.main.filter'
       )
     return
 
-  #filter switching
-  filterFilled = if filterFilled == '.filterTemp2' then '.filterTemp1' else '.filterTemp2'
-  # clear the html to have no repetition
-  $('.filterTemp1').html('')
-  $('.filterTemp2').html('')
+
   i = 0
   insertHTML = ''
-  repos = $('.repo.'+language) # this could have gotten the repetition
+  repos = $('.main.filter').find('.repo.'+language)
   last = repos.length
   # create the new rows
   for repo in repos
@@ -43,17 +40,12 @@ window.filterLanguage = (language) ->
     if i == last or i%3 == 2
       insertHTML += '</div>'
     i++
-  $(filterFilled).append(insertHTML)
 
-  #smoother fade maybe just fade the one that is not display none
-  j = 0
-  mains = $('.main')
-  lastMain = mains.length-1
-  for main in mains
-    if j == lastMain
-      $(main).fadeOut(400, ->
-        $(filterFilled).fadeIn(500)
-      )
-    else
-      $('.main').fadeOut(100)
-    j++
+  # smooth fade
+  $(displayOn).fadeOut(300,->
+    $filterTemp = $('.filterTemp')
+    $filterTemp.html('')
+    $filterTemp.append(insertHTML)
+    $filterTemp.fadeIn(400)
+    displayOn = '.filterTemp'
+    )

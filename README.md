@@ -4,8 +4,12 @@ layout: default
 permalink: /readme
 title: readme
 ---
+
+One of my main goals is to make everything usable for another user. So far just by changing the data for another github user it can be done. (i might need to test it, but in theory it should work)
+
 ## TODO (list for myself)
 - update this readme (forever)
+- MOVE ALL PENDING ISSUES ON GITHUB SO IT CAN BE EASILY BE MANAGE !IMPORTANT
 - continue design for default page
 - update assets to be more universal they do not work for deeper folders
 - need better fonts (google fonts?)
@@ -30,15 +34,15 @@ title: readme
   - __change this to projects page__
   - style
     - ~~seperate content into boxed~~ partially done
-      - make all boxes same height
+      - ~~make all boxes same height~~ done
       - hide description if it doesn't fit and add a show more toggle
-    - align boxes in the middle
+    - ~~align boxes in the middle~~ done
     - ~~change color scheme~~ done but need opinion of others
     - text overflow problem with long titles ie. Migration_of_Language_and_Income
     - make title a bit bigger (again text overflow problem might occur worse)
   - filter
     - need their own icon that clearly shows what it is
-    - ~~submenu buttons should filter results~~ done? NEED TO IMPLEMENT NEW METHOD TO HANDLE BOOTSTRAP COLUMNS
+    - ~~submenu buttons should filter result done? NEED TO IMPLEMENT NEW METHOD TO HANDLE BOOTSTRAP COLUMNSs~~ done
       - ~~add show all~~ done
       - add sort by name, data, etc
   - maybe add images of projects (easy peasy)

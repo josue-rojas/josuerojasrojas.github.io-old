@@ -64,7 +64,7 @@ title: Portfolio Home
 			<a href='{{repo.url}}'>Github</a>
 			{% if repo.projectLink != "" %}
 			<br>
-			<a href='{{repo.projectLink}}'>Projec Link</a>
+			<a href='{{repo.projectLink}}'>Project Link</a>
 			{% endif %}
 		</p>
 	</div>
@@ -91,7 +91,7 @@ title: Portfolio Home
 			<a href='{{repo.url}}'>Github</a>
 			{% if repo.projectLink != "" %}
 			<br>
-			<a href='{{repo.projectLink}}'>Projec Link</a>
+			<a href='{{repo.projectLink}}'>Project Link</a>
 			{% endif %}
 		</p>
 	</div>
@@ -107,12 +107,6 @@ title: Portfolio Home
 </div>
 
 <!--
-this is to hold and neatly display when a filter is on. it goes from
-if filter from all and first -> filterTemp1 show
-if filter from filterTemp1 -> filterTemp2 show
-if filter from filterTemp2 -> filterTemp1 show
-if show all from filterTemp1 or filterTemp2 -> main show
-Should just use one!!!!! will change later
+this is to hold and rows display when a filter is on.
  -->
-<div class='filterTemp1 main'></div>
-<div class='filterTemp2 main'></div>
+<div class='filterTemp main'></div>
