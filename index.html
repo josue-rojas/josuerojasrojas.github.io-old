@@ -13,15 +13,23 @@ title: Portfolio Home
 
 <div class="main">
 	{% for repo in site.data.data.repos %}
-	<div class='repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
-		<div class='languages'>
-		{% for language in repo.languages %}
-		<div class='language {{ language[0] }}-Order'>
-			<span class='{{ language[0] }}'>
-			</span>
+	{% assign whichColumn = forloop.index0 | modulo:3 %}
+	{% if whichColumn == 0 %}
+	<!-- row -->
+	<div class='row'>
+		<!-- first column -->
+		<div class='col-md-2 side-col'></div>
+		<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+			<!-- language circles -->
+			<div class='languages'>
+			{% for language in repo.languages %}
+			<div class='language {{ language[0] }}-Order'>
+				<span class='{{ language[0] }}'>
+				</span>
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
-	</div>
+		<!-- content -->
 		<div class='content'>
 			<p><b class='title'>{{ repo.repo_name }}</b>
 				<br>
@@ -30,10 +38,71 @@ title: Portfolio Home
 				<a href='{{repo.url}}'>Github</a>
 				{% if repo.projectLink != "" %}
 				<br>
-				<a href='{{repo.projectLink}}'>Projec Link</a>
+				<a href='{{repo.projectLink}}'>Project Link</a>
 				{% endif %}
 			</p>
 		</div>
+		</div>
+	{% elsif whichColumn == 1 %}
+	<!-- second column -->
+	<div class='col-md-1'> </div>
+	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+		<!-- language circles -->
+		<div class='languages'>
+		{% for language in repo.languages %}
+		<div class='language {{ language[0] }}-Order'>
+			<span class='{{ language[0] }}'>
+			</span>
+		</div>
+		{% endfor %}
 	</div>
-	{% endfor %}
+	<!-- content -->
+	<div class='content'>
+		<p><b class='title'>{{ repo.repo_name }}</b>
+			<br>
+			{{ repo.description }}
+			<br>
+			<a href='{{repo.url}}'>Github</a>
+			{% if repo.projectLink != "" %}
+			<br>
+			<a href='{{repo.projectLink}}'>Projec Link</a>
+			{% endif %}
+		</p>
+	</div>
+	</div>
+	<div class='col-md-1'></div>
+	{% elsif whichColumn == 2 %}
+	<!-- third column -->
+	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+		<!-- language circles -->
+		<div class='languages'>
+		{% for language in repo.languages %}
+		<div class='language {{ language[0] }}-Order'>
+			<span class='{{ language[0] }}'>
+			</span>
+		</div>
+		{% endfor %}
+	</div>
+	<!-- content -->
+	<div class='content'>
+		<p><b class='title'>{{ repo.repo_name }}</b>
+			<br>
+			{{ repo.description }}
+			<br>
+			<a href='{{repo.url}}'>Github</a>
+			{% if repo.projectLink != "" %}
+			<br>
+			<a href='{{repo.projectLink}}'>Projec Link</a>
+			{% endif %}
+		</p>
+	</div>
+	</div>
+	<div class='col-md-2 side-col'></div>
+	{% endif %}
+	{% if forloop.last or whichColumn == 2 %}
+	<!-- close the row if it's the last one or the end of the row -->
+	</div>
+	{% endif %}
+	{% endfor%}
+
 </div>

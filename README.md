@@ -38,7 +38,7 @@ title: readme
     - make title a bit bigger (again text overflow problem might occur worse)
   - filter
     - need their own icon that clearly shows what it is
-    - ~~submenu buttons should filter results~~ done?
+    - ~~submenu buttons should filter results~~ done? NEED TO IMPLEMENT NEW METHOD TO HANDLE BOOTSTRAP COLUMNS
       - ~~add show all~~ done
       - add sort by name, data, etc
   - maybe add images of projects (easy peasy)
