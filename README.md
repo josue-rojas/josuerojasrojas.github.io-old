@@ -5,7 +5,7 @@ permalink: /readme
 title: readme
 ---
 
-One of my main goals is to make everything usable for another user. So far just by changing the data for another github user it can be done. (i might need to test it, but in theory it should work)
+One of my main goals is to make everything usable for another user. By changing a few links it can be done.. (i might need to test it, but in theory it should work... (might need to make a seperate readme on what to change to make it for another user))
 
 ## TODO (list for myself)
 - update this readme (forever)

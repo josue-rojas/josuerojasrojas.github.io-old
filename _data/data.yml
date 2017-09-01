@@ -69,14 +69,14 @@
       projectLink: ""
       repo_name: "GoodCause"
     - 
-      description: "this is my portfolio in GitHub pages "
+      description: "this is my portfolio in GitHub pages  using Jekyll"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 23.986904972571228
-        CoffeeScript: 1.6280304370907803
-        HTML: 25.579543443638293
-        CSS: 48.8055211466997
+        Python: 17.753716043054844
+        CoffeeScript: 8.252178370066634
+        HTML: 32.26550486929779
+        CSS: 41.728600717580726
       projectLink: "https://josuerojasrojas.github.io/"
       repo_name: "josuerojasrojas.github.io"
     - 
@@ -92,11 +92,11 @@
     - 
       description: "CMP464 Project"
       created: "2016-05-04T18:38:37Z"
-      url: "https://github.com/josuerojasrojas/Migration_of_Language_and_Income"
+      url: "https://github.com/josuerojasrojas/Migration-of-Language-and-Income"
       languages: 
         Python: 100
       projectLink: "https://sites.google.com/site/josuerojasportfolio/python/migration-of-language-and-income"
-      repo_name: "Migration_of_Language_and_Income"
+      repo_name: "Migration-of-Language-and-Income"
     - 
       description: "A portfolio I made in TTP"
       created: "2017-06-16T16:03:31Z"
