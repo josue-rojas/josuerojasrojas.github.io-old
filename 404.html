@@ -2,15 +2,7 @@
 layout: default
 title: 404
 ---
-<div class="404">
+<div class="fourofour">
 	<h1>404</h1>
+	<p>Page Not Found<p>
 </div>
-<script>
-//this is to redirect all pages to none cause styling is set at root and will not be seen in other folders
-if(window.location.href != (window.location.origin+'/none')){
-	console.log(window.location.href)
-	console.log(window.location)
-	console.log(window.location.hostname)
-	window.location = window.location.origin+'/none'
-}
-</script>
