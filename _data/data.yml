@@ -17,24 +17,24 @@
       projectLink: ""
       repo_name: "Altruist"
     - 
-      description: "asteroid game on java"
+      description: "First java project for class, it's asteroids the game. (sort of)"
       created: "2015-12-30T05:38:19Z"
-      url: "https://github.com/josuerojasrojas/asteroid"
+      url: "https://github.com/josuerojasrojas/Asteroid"
       languages: 
         Java: 100
       projectLink: ""
-      repo_name: "asteroid"
+      repo_name: "Asteroid"
     - 
-      description: "crop a zip of images using http://imagesvc.timeincapp.com/ "
+      description: "Script to crop a bunch images zipped using http://imagesvc.timeincapp.com/ "
       created: "2017-08-09T14:32:03Z"
-      url: "https://github.com/josuerojasrojas/auto-image-crop"
+      url: "https://github.com/josuerojasrojas/Auto-Image-Crop"
       languages: 
         Python: 95.97349643221203
         Shell: 4.026503567787971
       projectLink: ""
-      repo_name: "auto-image-crop"
+      repo_name: "Auto-Image-Crop"
     - 
-      description: "A Bulletin Board using postgres to get data, with a bit of uniqueness."
+      description: "A Bulletin Board using postgres to get data, with a bit of uniqueness for TTP"
       created: "2017-06-18T22:32:04Z"
       url: "https://github.com/josuerojasrojas/Bulletin-Board"
       languages: 
@@ -44,7 +44,7 @@
       projectLink: "https://josue-bulletin.herokuapp.com"
       repo_name: "Bulletin-Board"
     - 
-      description: ""
+      description: "Answers for Code2040 test thingy"
       created: "2016-10-29T00:39:57Z"
       url: "https://github.com/josuerojasrojas/Code2040"
       languages: 
@@ -69,18 +69,18 @@
       projectLink: ""
       repo_name: "GoodCause"
     - 
-      description: "this is my portfolio in GitHub pages  using Jekyll"
+      description: "This is my portfolio in GitHub pages  using Jekyll"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 17.753716043054844
-        CoffeeScript: 8.252178370066634
-        HTML: 32.26550486929779
-        CSS: 41.728600717580726
+        Python: 17.49700069457599
+        CoffeeScript: 8.132853444465491
+        HTML: 34.198396160889054
+        CSS: 40.17174970006946
       projectLink: "https://josuerojasrojas.github.io/"
       repo_name: "josuerojasrojas.github.io"
     - 
-      description: "TTP Jukebox example using Spotify API to get song previews and also has the ability to play mp3 links."
+      description: "Jukebox example using Spotify API to get song previews and also has the ability to play mp3 links for TTP project"
       created: "2017-06-12T18:06:59Z"
       url: "https://github.com/josuerojasrojas/JukeBox"
       languages: 
@@ -98,7 +98,7 @@
       projectLink: "https://sites.google.com/site/josuerojasportfolio/python/migration-of-language-and-income"
       repo_name: "Migration-of-Language-and-Income"
     - 
-      description: "A portfolio I made in TTP"
+      description: "A portfolio I made for TTP. Uses postgress database and heroku for hosting."
       created: "2017-06-16T16:03:31Z"
       url: "https://github.com/josuerojasrojas/Portfolio"
       languages: 
@@ -124,7 +124,7 @@
       projectLink: ""
       repo_name: "Simon"
     - 
-      description: "mining stock names from www.google.com/finance and getting basic stat information. basically building a database."
+      description: "Mining stock names from www.google.com/finance and getting basic stat information. Basically building a database."
       created: "2017-05-10T21:35:44Z"
       url: "https://github.com/josuerojasrojas/Stock-Mining"
       languages: 
