@@ -14,7 +14,7 @@
       url: "https://github.com/josuerojasrojas/Altruist"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Altruist"
     - 
       description: "First java project for class, it's asteroids the game. (sort of)"
@@ -22,7 +22,7 @@
       url: "https://github.com/josuerojasrojas/Asteroid"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Asteroid"
     - 
       description: "Script to crop a bunch images zipped using http://imagesvc.timeincapp.com/ "
@@ -31,7 +31,7 @@
       languages: 
         Python: 95.97349643221203
         Shell: 4.026503567787971
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Auto-Image-Crop"
     - 
       description: "A Bulletin Board using postgres to get data, with a bit of uniqueness for TTP"
@@ -49,7 +49,7 @@
       url: "https://github.com/josuerojasrojas/Code2040"
       languages: 
         Python: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Code2040"
     - 
       description: "OS Class Project simulating and measuring fragmentation for contiguous and linked data."
@@ -66,7 +66,7 @@
       languages: 
         HTML: 77.10796666020546
         CSS: 22.892033339794533
-      projectLink: ""
+      projectLink: "#"
       repo_name: "GoodCause"
     - 
       description: "This is my portfolio in GitHub pages  using Jekyll"
@@ -113,7 +113,7 @@
       url: "https://github.com/josuerojasrojas/Revenge"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Revenge"
     - 
       description: "Simon Game for android for Applied Science "
@@ -121,7 +121,7 @@
       url: "https://github.com/josuerojasrojas/Simon"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Simon"
     - 
       description: "Mining stock names from www.google.com/finance and getting basic stat information. Basically building a database."
@@ -129,7 +129,7 @@
       url: "https://github.com/josuerojasrojas/Stock-Mining"
       languages: 
         Python: 100
-      projectLink: ""
+      projectLink: "#"
       repo_name: "Stock-Mining"
   avatar_url: "https://avatars0.githubusercontent.com/u/10749061?v=4"
 

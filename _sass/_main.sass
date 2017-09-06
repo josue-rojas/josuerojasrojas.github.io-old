@@ -7,31 +7,35 @@
   width: 100%
   margin: 10px 0
   display: inline-block
-  border: 1px solid $medium-color
-  border-radius: 5px
+  // border: 1px solid $medium-color
+  // border-radius: 5px
   .content
-    margin: 0 10px 10px 10px
+    margin: 0 10px 10px 0px
+    +max-mobile
+      margin: 0 0 10px 0
   .languages
-    margin-left: 10px
+    // margin-left: 10px
     display: flex
     +max-mobile
       justify-content: center
   .title
-    margin: 5px 0
+    // margin: 5px 0
     font-size: 18px
     // text-transform: uppercase
     +max-mobile
       text-align: center
     // b
     //   border-bottom: solid 0.1px
-  .description
-    min-height: 72px
+  // .description
+    // min-height: 72px
   //   white-space: nowrap
   //   overflow: hidden
   //   text-overflow: ellipsis
   .button-container
+    display: none
     +max-mobile
       display: flex
+      display: none
       justify-content: center
     .button
       margin: 5px
@@ -42,7 +46,18 @@
       &:hover
         color: $darker-color
         background-color: $lightess-color
+      +max-width($max-mobile-content-width)
+        &:first-child
+          margin-left: 0
+    .button.inactive
+      background-color: $darker-color
+      color: $medium-color
+      &:hover
+        color: $medium-color
+        background-color: $darker-color
 +max-mobile
+  .description
+    // display: none
   .col-md-2.repo
     flex: 0 0 22.666667%
     max-width: 22.666667%

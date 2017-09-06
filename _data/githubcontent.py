@@ -41,7 +41,7 @@ def getInfo():
         repoDesc.append(repo['description'] if repo['description'] else '')
         createAt.append(repo['created_at'] if repo['created_at'] else '')
         languages.append(languagePercent(requests.get(repo['languages_url'],auth=('josuerojasrojas',os.environ['gittoken'])).json()) if repo['languages_url'] else [])
-        projectLink.append(repo['homepage'] if repo['homepage'] else '')
+        projectLink.append(repo['homepage'] if repo['homepage'] else '#')
     return repoNames, htmlURL, repoDesc, createAt, languages, projectLink
 
 # this returns a json object (how i wanted)
