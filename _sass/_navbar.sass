@@ -1,13 +1,13 @@
 //this sass is for navigation bar and sub navs
 
-.navbar, .submenu
+.navbar
   background-color: $darker-color
   width: 100vw
   display: flex
   flex-direction: column
   justify-content: center
   ul
-    overflow: hidden
+    // overflow: hidden
     list-style-type: none
     margin: 0
     padding: 0
@@ -25,15 +25,16 @@
     &:hover
       color: $light-color
 
+.submenu
+  .dropdown
+    display: inline-block
+  .btn
+    color: $lightess-color
+    background-color: $darker-color
+  .dropdown-menu
+    background-color: $darker-color
 
 .submenu, .language
-  ul
-    display: flex
-  div, li
-    width: 40px
-    height: 40px
-    margin: 5px
-    border-radius: 50%
   .Shell
     background-color: $Shell
     &:hover

@@ -16,13 +16,13 @@
   .languages
     // margin-left: 10px
     display: flex
-    +max-mobile
+    +medium-devices
       justify-content: center
   .title
     // margin: 5px 0
     font-size: 18px
     // text-transform: uppercase
-    +max-mobile
+    +medium-devices
       text-align: center
     // b
     //   border-bottom: solid 0.1px
@@ -32,8 +32,7 @@
   //   overflow: hidden
   //   text-overflow: ellipsis
   .button-container
-    display: none
-    +max-mobile
+    +medium-devices
       display: flex
       display: none
       justify-content: center
@@ -46,23 +45,12 @@
       &:hover
         color: $darker-color
         background-color: $lightess-color
-      +max-width($max-mobile-content-width)
-        &:first-child
-          margin-left: 0
-    .button.inactive
-      background-color: $darker-color
-      color: $medium-color
-      &:hover
-        color: $medium-color
-        background-color: $darker-color
-+max-mobile
-  .description
-    // display: none
++medium-devices
   .col-md-2.repo
-    flex: 0 0 22.666667%
-    max-width: 22.666667%
+    flex: 0 0 25.666667%
+    max-width: 25.666667%
   .side-col
-    flex: 0 0 9.5%
+    flex: 0 0 6.5%
   .col-md-1
     flex: 0 0 5.333333%
 

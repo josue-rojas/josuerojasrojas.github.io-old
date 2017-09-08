@@ -27,32 +27,20 @@
     @content
 
 // break points media query
-=wide-mobile
-  +min-width($wide-mobile)
+=small-devices
+  +min-width($small-devices)
     @content
 
-=narrow-desktop
-  +min-width($narrow-desktop)
+=medium-devices
+  +min-width($medium-devices)
     @content
 
-=max-mobile
-  +min-width($max-mobile-content-width)
+=large-devices
+  +min-width($large-devices)
     @content
 
-=small-desktop
-  +min-width($small-desktop)
-    @content
-
-=wide-desktop
-  +min-width($wide-desktop)
-    @content
-
-=wide-component
-  +min-width($narrow-desktop)
-    @content
-
-=narrow-desktop-only
-  @media (min-width: $narrow-desktop) and (max-width: $wide-desktop)
+=extra-large-devices
+  +min-width($extra-large-devices)
     @content
 
 // Adds a clearfix to an element.
@@ -74,6 +62,6 @@
     @content
 
 
-+max-width($max-mobile-content-width)
++max-width($medium-devices)
   .mobilecheck
     display: none
