@@ -18,7 +18,7 @@ title: Portfolio Home
 <div class='row'>
 	<!-- first column -->
 	<div class='col-md-2 side-col'></div>
-	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name }}'>
 		<!-- language circles -->
 		<div class='languages'>
 		{% for language in repo.languages %}
@@ -42,7 +42,7 @@ title: Portfolio Home
 {% elsif whichColumn == 1 %}
 <!-- second column -->
 <div class='col-md-1'> </div>
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name }}'>
 	<!-- language circles -->
 	<div class='languages'>
 	{% for language in repo.languages %}
@@ -66,7 +66,7 @@ title: Portfolio Home
 <div class='col-md-1'></div>
 {% elsif whichColumn == 2 %}
 <!-- third column -->
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}'>
+<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name }}'>
 	<!-- language circles -->
 	<div class='languages'>
 	{% for language in repo.languages %}
