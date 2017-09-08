@@ -1,5 +1,6 @@
 //this sass is for navigation bar and sub navs
 
+
 .navbar
   background-color: $darker-color
   width: 100vw
@@ -28,41 +29,21 @@
 .submenu
   .dropdown
     display: inline-block
+  .dropdown-menu.show
+    display: flex
+    flex-direction: column
   .btn
     color: $lightess-color
     background-color: $darker-color
   .dropdown-menu
     background-color: $darker-color
+  .dropdown-item:hover, .dropdown-item:focus
+    background-color: $darker-color
+    +langauge-colors-hover
 
-.submenu, .language
-  .Shell
-    background-color: $Shell
-    &:hover
-      background-color: $Shell-Hover
-  .Java
-    background-color: $Java
-    &:hover
-      background-color: $Java-Hover
-  .Python
-    background-color: $Python
-    &:hover
-      background-color: $Python-Hover
-  .JavaScript
-    background-color: $JavaScript
-    &:hover
-      background-color: $JavaScript-Hover
-  .HTML
-    background-color: $HTML
-    &:hover
-      background-color: $HTML-Hover
-  .CSS
-    background-color: $CSS
-    &:hover
-      background-color: $CSS-Hover
-  .CoffeeScript
-    background-color: $CoffeeScript
-    &:hover
-      background-color: $CoffeeScript-Hover
+.submenu, .language,
+  +langauge-colors
+
   //rainbow circle
   //https://codepen.io/nohoid/pen/kIfto source partial
   .rainbow-circle
