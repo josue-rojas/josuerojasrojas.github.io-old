@@ -51,10 +51,18 @@ window.filterLanguage = (language) ->
     displayOn = '.filterTemp'
     )
 
-
-window.sortName = ->
+reverse = false
+prevType = ''
+window.sortRepos = (type) ->
   repos = $(displayOn).find('.repo')
-  selectNames = ((displayOn+" [data-name='"+$(repo).data('name')+"']") for repo in repos).reverse()
+  selectNames = ((displayOn+" [data-" + type + "='"+$(repo).data(type)+"']") for repo in repos).sort()
+  # toogle reverse MIGHT NEED TO CHANGE THIS, IT'S A BIT CONFUSING
+  if reverse and type == prevType
+     selectNames.reverse()
+  else
+    reverse = false
+  reverse = !reverse
+  prevType = type
   insertHTML = makeRows(selectNames)
   $(displayOn).fadeOut(300,->
     $filterTemp = $('.filterTemp')
