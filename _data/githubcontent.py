@@ -43,7 +43,7 @@ def getInfo():
         repoDesc.append(repo['description'] if repo['description'] else '')
         createAt.append(repo['created_at'] if repo['created_at'] else '')
         languages.append(languagePercent(requests.get(repo['languages_url'],auth=('josuerojasrojas',os.environ['gittoken'])).json()) if repo['languages_url'] else [])
-        projectLink.append(repo['homepage'] if repo['homepage'] else '')
+        projectLink.append(repo['homepage'] if repo['homepage'] else '#')
     datevalue = [dp.parse(dateC).strftime('%s') for dateC in createAt] # value of time for sorting
     return repoNames, htmlURL, repoDesc, createAt, languages, projectLink, datevalue
 

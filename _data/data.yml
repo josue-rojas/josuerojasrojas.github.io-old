@@ -14,7 +14,7 @@
       url: "https://github.com/josuerojasrojas/Altruist"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1478410391"
       repo_name: "Altruist"
     - 
@@ -23,7 +23,7 @@
       url: "https://github.com/josuerojasrojas/Asteroid"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1451471899"
       repo_name: "Asteroid"
     - 
@@ -33,7 +33,7 @@
       languages: 
         Python: 95.97349643221203
         Shell: 4.026503567787971
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1502307123"
       repo_name: "Auto-Image-Crop"
     - 
@@ -53,7 +53,7 @@
       url: "https://github.com/josuerojasrojas/Code2040"
       languages: 
         Python: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1477719597"
       repo_name: "Code2040"
     - 
@@ -72,7 +72,7 @@
       languages: 
         HTML: 77.10796666020546
         CSS: 22.892033339794533
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1496359669"
       repo_name: "GoodCause"
     - 
@@ -124,7 +124,7 @@
       url: "https://github.com/josuerojasrojas/Revenge"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1464660621"
       repo_name: "Revenge"
     - 
@@ -133,7 +133,7 @@
       url: "https://github.com/josuerojasrojas/Simon"
       languages: 
         Java: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1468374086"
       repo_name: "Simon"
     - 
@@ -142,7 +142,7 @@
       url: "https://github.com/josuerojasrojas/Stock-Mining"
       languages: 
         Python: 100
-      projectLink: ""
+      projectLink: "#"
       datevalue: "1494470144"
       repo_name: "Stock-Mining"
   avatar_url: "https://avatars0.githubusercontent.com/u/10749061?v=4"

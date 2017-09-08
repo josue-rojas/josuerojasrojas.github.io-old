@@ -59,7 +59,7 @@ title: Portfolio Home
 		<div class='description'>{{ repo.description }}</div>
 		<div class='button-container'>
 			<a class='button' href='{{repo.url}}'>Github</a>
-			{% if repo.projectLink != "" %}
+			{% if repo.projectLink != "#" %}
 			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 			{% endif %}
 		</div>
@@ -83,7 +83,7 @@ title: Portfolio Home
 	<div class='description'>{{ repo.description }}</div>
 	<div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
-		{% if repo.projectLink != "" %}
+		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
 	</div>
@@ -107,7 +107,7 @@ title: Portfolio Home
 	<div class='description'>{{ repo.description }}</div>
 	<div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
-		{% if repo.projectLink != "" %}
+		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
 	</div>
