@@ -5,9 +5,11 @@ permalink: /readme
 title: readme
 ---
 
-One of my main goals is to make everything usable for another user. By changing a few links it can be done.. (i might need to test it, but in theory it should work... (might need to make a seperate readme on what to change to make it for another user))
+One of my main goals is to make everything usable for another user. By changing a few links it can be done.. (i might need to test it, but in theory it should work... (might need to make a separate readme on what to change to make it for another user))
 
-## TODO (list for myself)
+Anyway to see what I am currently doing to this page check github issues for this repo. [Check it Here!](https://github.com/josuerojasrojas/josuerojasrojas.github.io/issues)
+
+<!-- ## TODO (list for myself) EVERTHING MOVED TO ISSUES ON GITHUB
 - update this readme (forever)
 - MOVE ALL PENDING ISSUES ON GITHUB SO IT CAN BE EASILY BE MANAGE !IMPORTANT
 - continue design for default page
@@ -58,9 +60,9 @@ One of my main goals is to make everything usable for another user. By changing 
   - might change boxes to a bit lighter color like #100f10
 - test
   - display flex should have prefix???
-    - test in different browsers or online if prefix is needed
+    - test in different browsers or online if prefix is needed -->
 
-### Resource i used (websites and stuff)
+#### Resource i used (websites and stuff)
 (there might have been more but sometimes i do not keep track of everything)
 - [important to know how to use](http://google.com/)
 - [Jekyll Structures](https://jekyllrb.com/docs/structure/)
