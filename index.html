@@ -4,10 +4,36 @@ title: Portfolio Home
 ---
 <div class='submenu navbar'>
 <ul>
-	<li class='rainbow-circle' onclick='filterLanguage("repo")'></li>
+	<li>
+		<!--Filter button-->
+		<div class="dropdown">
+  		<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter
+  		</button>
+  		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#" onclick='filterLanguage("repo")'>All <span class='rainbow-circle' style=" display: inline-block; width: 20px; height: 20px; border-radius: 50%;float: right;"></span></a>
+				{% for language in site.data.data.languages %}
+    		<a class="dropdown-item" href="#" onclick='filterLanguage("{{language}}")'>{{language}} <span class='{{ language }}' style=" display: inline-block; width: 20px; height: 20px; border-radius: 50%; float: right;"></a>
+				{% endfor %}
+  		</div>
+		</div>
+		<!--Sort button-->
+		<div class="dropdown">
+  		<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort
+  		</button>
+  		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#" onclick='sortRepos("name")'>Name</a>
+				<a class="dropdown-item" href="#" onclick='sortRepos("date")'>Date</a>
+  		</div>
+		</div>
+
+	</li>
+
+	<!-- <li class='rainbow-circle' onclick='filterLanguage("repo")'></li>
 	{% for language in site.data.data.languages %}
 	<li class='{{ language }}' onclick='filterLanguage("{{language}}")'></li>
-	{% endfor %}
+	{% endfor %} -->
 </ul>
 </div>
 <div class="main filter">
