@@ -15,6 +15,7 @@
       languages: 
         Java: 100
       projectLink: ""
+      datevalue: "1478410391"
       repo_name: "Altruist"
     - 
       description: "First java project for class, it's asteroids the game. (sort of)"
@@ -23,6 +24,7 @@
       languages: 
         Java: 100
       projectLink: ""
+      datevalue: "1451471899"
       repo_name: "Asteroid"
     - 
       description: "Script to crop a bunch images zipped using http://imagesvc.timeincapp.com/ "
@@ -32,6 +34,7 @@
         Python: 95.97349643221203
         Shell: 4.026503567787971
       projectLink: ""
+      datevalue: "1502307123"
       repo_name: "Auto-Image-Crop"
     - 
       description: "A Bulletin Board using postgres to get data, with a bit of uniqueness for TTP"
@@ -42,6 +45,7 @@
         JavaScript: 34.31847736139024
         CSS: 0.8038775268944319
       projectLink: "https://josue-bulletin.herokuapp.com"
+      datevalue: "1497843124"
       repo_name: "Bulletin-Board"
     - 
       description: "Answers for Code2040 test thingy"
@@ -50,6 +54,7 @@
       languages: 
         Python: 100
       projectLink: ""
+      datevalue: "1477719597"
       repo_name: "Code2040"
     - 
       description: "OS Class Project simulating and measuring fragmentation for contiguous and linked data."
@@ -58,6 +63,7 @@
       languages: 
         Java: 100
       projectLink: "https://sites.google.com/view/josuerojas/data-alllocation"
+      datevalue: "1480460874"
       repo_name: "DataAllocation"
     - 
       description: "day 3"
@@ -67,17 +73,19 @@
         HTML: 77.10796666020546
         CSS: 22.892033339794533
       projectLink: ""
+      datevalue: "1496359669"
       repo_name: "GoodCause"
     - 
       description: "This is my portfolio in GitHub pages  using Jekyll"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 17.49700069457599
-        CoffeeScript: 8.132853444465491
-        HTML: 34.198396160889054
-        CSS: 40.17174970006946
+        Python: 16.65564705175212
+        CoffeeScript: 7.7417803690569205
+        HTML: 32.78235258760594
+        CSS: 42.82021999158502
       projectLink: "https://josuerojasrojas.github.io/"
+      datevalue: "1500876695"
       repo_name: "josuerojasrojas.github.io"
     - 
       description: "Jukebox example using Spotify API to get song previews and also has the ability to play mp3 links for TTP project"
@@ -88,6 +96,7 @@
         HTML: 14.350750832370728
         CSS: 12.747163144662634
       projectLink: "https://josue-jukebox.herokuapp.com/"
+      datevalue: "1497308819"
       repo_name: "JukeBox"
     - 
       description: "CMP464 Project"
@@ -96,6 +105,7 @@
       languages: 
         Python: 100
       projectLink: "https://sites.google.com/site/josuerojasportfolio/python/migration-of-language-and-income"
+      datevalue: "1462405117"
       repo_name: "Migration-of-Language-and-Income"
     - 
       description: "A portfolio I made for TTP. Uses postgress database and heroku for hosting."
@@ -106,6 +116,7 @@
         HTML: 47.430703624733475
         CSS: 4.164889836531628
       projectLink: "https://josue-portfolio.herokuapp.com/"
+      datevalue: "1497647011"
       repo_name: "Portfolio"
     - 
       description: "A java game using parallex scrolling, sprites, basic save game, and ps3 controller."
@@ -114,6 +125,7 @@
       languages: 
         Java: 100
       projectLink: ""
+      datevalue: "1464660621"
       repo_name: "Revenge"
     - 
       description: "Simon Game for android for Applied Science "
@@ -122,6 +134,7 @@
       languages: 
         Java: 100
       projectLink: ""
+      datevalue: "1468374086"
       repo_name: "Simon"
     - 
       description: "Mining stock names from www.google.com/finance and getting basic stat information. Basically building a database."
@@ -130,6 +143,7 @@
       languages: 
         Python: 100
       projectLink: ""
+      datevalue: "1494470144"
       repo_name: "Stock-Mining"
   avatar_url: "https://avatars0.githubusercontent.com/u/10749061?v=4"
 

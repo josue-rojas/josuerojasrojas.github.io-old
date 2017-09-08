@@ -1,5 +1,7 @@
 from __future__ import division
 import requests, json, os
+import dateutil.parser as dp
+
 '''
 # end points useful to me
 # curl -X GET https://api.github.com/users/josuerojasrojas/repos
@@ -42,11 +44,12 @@ def getInfo():
         createAt.append(repo['created_at'] if repo['created_at'] else '')
         languages.append(languagePercent(requests.get(repo['languages_url'],auth=('josuerojasrojas',os.environ['gittoken'])).json()) if repo['languages_url'] else [])
         projectLink.append(repo['homepage'] if repo['homepage'] else '')
-    return repoNames, htmlURL, repoDesc, createAt, languages, projectLink
+    datevalue = [dp.parse(dateC).strftime('%s') for dateC in createAt] # value of time for sorting
+    return repoNames, htmlURL, repoDesc, createAt, languages, projectLink, datevalue
 
 # this returns a json object (how i wanted)
 # getInfo() should be run first to get allLanguages
-def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink, allLanguages=allLanguages):
+def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink, datevalue, allLanguages=allLanguages):
     # make each repo json
     repoJson = []
     for i in range(len(repoNames)):
@@ -56,7 +59,8 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink,
         'description': repoDesc[i],
         'languages': languages[i],
         'created': createAt[i],
-        'projectLink': projectLink[i]
+        'projectLink': projectLink[i],
+        'datevalue': datevalue[i]
         })
     dataJson = {
         'avatar_url': getAvatar(),
@@ -66,9 +70,9 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink,
     return dataJson
 
 def main():
-    repoNames, htmlURL, repoDesc, createAt, languages, projectLink = getInfo()
+    repoNames, htmlURL, repoDesc, createAt, languages, projectLink, datevalue = getInfo()
     with open('data.json','w') as jsonfile:
-        json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink), jsonfile)
+        json.dump(organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink, datevalue), jsonfile)
     os.chdir(os.getcwd())
     os.system('cd '+ os.getcwd()+ '; json2yaml data.json > data.yml') #it's easier to use so i've heard, plus it looks pretty
 
