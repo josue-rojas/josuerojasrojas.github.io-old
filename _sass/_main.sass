@@ -1,4 +1,4 @@
-// this sass is for main page content
+// this sass is for project page content
 .main
   margin: 10px
 .repo
@@ -7,30 +7,18 @@
   width: 100%
   margin: 10px 0
   display: inline-block
-  // border: 1px solid $medium-color
-  // border-radius: 5px
   .content
     margin: 0 10px 10px 0px
     +medium-devices
       margin: 0 0 10px 0
   .languages
-    // margin-left: 10px
     display: flex
     +medium-devices
       justify-content: center
   .title
-    // margin: 5px 0
     font-size: 18px
-    // text-transform: uppercase
     +medium-devices
       text-align: center
-    // b
-    //   border-bottom: solid 0.1px
-  // .description
-    // min-height: 72px
-  //   white-space: nowrap
-  //   overflow: hidden
-  //   text-overflow: ellipsis
   .button-container
     +medium-devices
       display: flex
@@ -55,3 +43,13 @@
 
 .filterTemp
   display: none
+
+// this is for home/about me (might make this another sass file)
+.heading
+  +medium-devices
+    margin: 0 10% 10px 10%
+  display: flex
+  justify-content: center
+  .avatar
+    float: left
+    margin-right: 10px
