@@ -3,10 +3,41 @@ layout: default
 title: Home
 ---
 <div class='main'>
-  <div class='name'>josue rojas</div>
-  <a href='https://goo.gl/yFs4U6'>Resume</a>
+  <div class='heading'>
+    <div class='avatar-container'>
+      <img class='avatar' src='{{ site.data.data.avatar_url }}&s=150'></img>
+    </div>
+    <div class='info-container'>
+      <div class='name'>Josue Rojas</div>
+      <div class='github-info'>Github: <a href='https://github.com/josuerojasrojas'>josuerojasrojas</a></div>
+      <a href='https://goo.gl/yFs4U6'>Resume</a>
+    </div>
+  </div>
+  <div class='content'>
+    About Me:
+    <br>
+    Coming soon!?!?!?!...
+    <div class='redirect'>
+    REDIRECTEING TO PROJECTS PAGE
+  </div>
+  </div>
   <script>
-    //cause this is under construction
-    window.location='/projects'
+    dot = 0
+    function dots(redirect=false){
+      dot++
+      $('.redirect').text($('.redirect').text()+'.')
+      if(dot == 20){
+        //cause this is under construction
+        window.location='/projects'
+        redirect = true
+      }
+      if(redirect){
+        return
+      }
+      else setTimeout(function(){
+        dots()
+      },100)
+    }
+    dots()
   </script>
 </div>
