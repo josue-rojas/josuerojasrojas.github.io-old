@@ -26,6 +26,7 @@
     &:hover
       color: $light-color
 
+// this should be moved to projects sass
 .submenu
   .dropdown
     display: inline-block
@@ -37,6 +38,14 @@
     background-color: $darker-color
   .dropdown-menu
     background-color: $darker-color
+  .dropdown-item
+    span
+      display: inline-block
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      float: right
+      margin-top: 2px
   .dropdown-item:hover, .dropdown-item:focus
     background-color: $darker-color
     +langauge-colors-hover
