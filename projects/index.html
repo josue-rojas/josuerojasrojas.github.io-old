@@ -11,9 +11,9 @@ title: Projects
     Filter
   		</button>
   		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    		<a class="dropdown-item rainbow-circle-Order" href="#" onclick='filterLanguage("repo")'>All <span class='rainbow-circle' style=" display: inline-block; width: 20px; height: 20px; border-radius: 50%;float: right;"></span></a>
+    		<a class="dropdown-item rainbow-circle-Order" href="#" onclick='filterLanguage("repo")'>All <span class='rainbow-circle'></span></a>
 				{% for language in site.data.data.languages %}
-    		<a class="dropdown-item {{language}}-Order" href="#" onclick='filterLanguage("{{language}}")'>{{language}} <span class='{{ language }}' style=" display: inline-block; width: 20px; height: 20px; border-radius: 50%; float: right;"></a>
+    		<a class="dropdown-item {{language}}-Order" href="#" onclick='filterLanguage("{{language}}")'>{{language}} <span class='{{ language }}'></a>
 				{% endfor %}
   		</div>
 		</div>
