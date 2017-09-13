@@ -80,10 +80,10 @@
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 15.643044619422572
-        CoffeeScript: 11.086614173228346
-        HTML: 36.57217847769029
-        CSS: 36.6981627296588
+        Python: 14.49839447309526
+        CoffeeScript: 10.275372190327916
+        HTML: 37.66176899873504
+        CSS: 37.564464337841784
       projectLink: "https://josuerojasrojas.github.io/"
       datevalue: "1500876695"
       repo_name: "josuerojasrojas.github.io"
@@ -99,7 +99,7 @@
       datevalue: "1497308819"
       repo_name: "JukeBox"
     - 
-      description: "CMP464 Project"
+      description: "Attempt to visualize the question: Is there a relationship between migration vs language vs income?"
       created: "2016-05-04T18:38:37Z"
       url: "https://github.com/josuerojasrojas/Migration-of-Language-and-Income"
       languages: 
