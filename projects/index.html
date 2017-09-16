@@ -51,12 +51,12 @@ title: Projects
 	<div class='content'>
 		<div class='title'><b>{{ repo.repo_name }}</b></div>
 		<div class='description'>{{ repo.description }}</div>
-		<div class='button-container'>
-			<a class='button' href='{{repo.url}}'>Github</a>
-			{% if repo.projectLink != "#" %}
-			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
-			{% endif %}
-		</div>
+	</div>
+	<div class='button-container'>
+		<a class='button' href='{{repo.url}}'>Github</a>
+		{% if repo.projectLink != "#" %}
+		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
+		{% endif %}
 	</div>
 	</div>
 {% elsif whichColumn == 1 %}
@@ -75,12 +75,12 @@ title: Projects
 <div class='content'>
 	<div class='title'><b>{{ repo.repo_name }}</b></div>
 	<div class='description'>{{ repo.description }}</div>
-	<div class='button-container'>
+	<!-- <div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
 		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
-	</div>
+	</div> -->
 </div>
 </div>
 <div class='col-md-1'></div>
@@ -99,12 +99,12 @@ title: Projects
 <div class='content'>
 	<div class='title'><b>{{ repo.repo_name }}</b></div>
 	<div class='description'>{{ repo.description }}</div>
-	<div class='button-container'>
+	<!-- <div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
 		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
-	</div>
+	</div> -->
 </div>
 </div>
 <div class='col-md-2 side-col'></div>

@@ -20,9 +20,11 @@
     +medium-devices
       text-align: center
   .button-container
+    width: calc(100% - 30px)
     +medium-devices
       display: flex
       justify-content: center
+      display: none
     .button
       margin: 5px
       background-color: $medium-color
@@ -32,6 +34,13 @@
       &:hover
         color: $darker-color
         background-color: $lightess-color
+  &:hover
+    .language, .content
+      filter: blur(5px) brightness(200%)
+    .button-container
+      display: flex
+      position: fixed
+
 +medium-devices
   .col-md-2.repo
     flex: 0 0 25.666667%
