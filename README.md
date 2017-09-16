@@ -4,12 +4,20 @@ layout: default
 permalink: /readme
 title: readme
 ---
+My attempt to make a generic portfolio which uses liquid templating language(jekyll), sass, CoffeeScript, and python for getting data.
 
-One of my main goals is to make everything usable for another user. By changing a few links it can be done.. (i might need to test it, but in theory it should work... (might need to make a separate readme on what to change to make it for another user))
+(i need a better design but i am not a designer so do not criticizes that too harshly)
 
-Anyway to see what I am currently doing to this page check github issues for this repo. [Check it Here!](https://github.com/josuerojasrojas/josuerojasrojas.github.io/issues)
+<!-- One of my main goals is to make everything usable for another user.
+(this is going to be a issue opened to be worked on)
+Starting in data folder githubcontent.py should be changed to the person's username
+- need to seperate username from get request (and check for auth tokens exits)
+- might just get more info just cause and make filter to just make yml what is wanted -->
+<!-- By changing a few links it can be done.. (i might need to test it, but in theory it should work... (might need to make a separate readme on what to change to make it for another user)) -->
 
-<!-- ## TODO (list for myself) EVERTHING MOVED TO ISSUES ON GITHUB
+Anyway to see what I am currently doing to this site check github issues for this repo. [Check it Here!](https://github.com/josuerojasrojas/josuerojasrojas.github.io/issues)
+
+<!-- ## TODO (list for myself) EVERYTHING MOVED TO ISSUES ON GITHUB
 - update this readme (forever)
 - MOVE ALL PENDING ISSUES ON GITHUB SO IT CAN BE EASILY BE MANAGE !IMPORTANT
 - continue design for default page
