@@ -66,16 +66,6 @@
       datevalue: "1480460874"
       repo_name: "DataAllocation"
     - 
-      description: "day 3"
-      created: "2017-06-01T18:27:49Z"
-      url: "https://github.com/josuerojasrojas/GoodCause"
-      languages: 
-        HTML: 77.10796666020546
-        CSS: 22.892033339794533
-      projectLink: "#"
-      datevalue: "1496359669"
-      repo_name: "GoodCause"
-    - 
       description: "This is my portfolio in GitHub pages  using Jekyll"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"

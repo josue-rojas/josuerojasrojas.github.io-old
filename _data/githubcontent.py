@@ -13,6 +13,7 @@ import dateutil.parser as dp
 # get language
 # ge languages_url better language from this compile a list of languages
 '''
+ignore = ['GoodCause', 'TTP-Techninal-Questions'] #repos to ignore
 repos = requests.get('https://api.github.com/users/josuerojasrojas/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
 allLanguages = set([])
 
@@ -38,6 +39,8 @@ def getInfo():
     languages = []
     projectLink = []
     for repo in repos:
+        if repo['name'] in ignore:
+            continue
         repoNames.append(repo['name'] if repo['name'] else '')
         htmlURL.append(repo['html_url'] if repo['html_url'] else '')
         repoDesc.append(repo['description'] if repo['description'] else '')
