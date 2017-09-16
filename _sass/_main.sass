@@ -21,16 +21,17 @@
       text-align: center
   .button-container
     width: calc(100% - 30px)
-    +medium-devices
-      display: flex
-      justify-content: center
-      display: none
+    height: 100%
+    display: none
     .button
       margin: 5px
+      //max-height depends on font size
+      max-height: 30px
       background-color: $medium-color
       padding: 3px 10px
       display: inline-block
       color: $lightess-color
+      z-index: 1000
       &:hover
         color: $darker-color
         background-color: $lightess-color
@@ -39,7 +40,12 @@
       filter: blur(5px) brightness(200%)
     .button-container
       display: flex
-      position: fixed
+      position: absolute
+      justify-content: center
+      align-items: center
+      .button:hover
+        color: $darker-color
+        background-color: $lightess-color
 
 +medium-devices
   .col-md-2.repo
