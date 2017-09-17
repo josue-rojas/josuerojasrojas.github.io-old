@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+coffee_custom: projects
 ---
 <div class='submenu navbar'>
 <ul>
@@ -38,7 +39,14 @@ title: Projects
 <div class='row'>
 	<!-- first column -->
 	<div class='col-md-2 side-col'></div>
-	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+	<div class='col-md-2 repo repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+		<!-- button -->
+		<div class='button-container'>
+			<a class='button' href='{{repo.url}}'>Github</a>
+			{% if repo.projectLink != "#" %}
+			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
+			{% endif %}
+		</div>
 		<!-- language circles -->
 		<div class='languages'>
 		{% for language in repo.languages %}
@@ -51,18 +59,19 @@ title: Projects
 	<div class='content'>
 		<div class='title'><b>{{ repo.repo_name }}</b></div>
 		<div class='description'>{{ repo.description }}</div>
-		<div class='button-container'>
-			<a class='button' href='{{repo.url}}'>Github</a>
-			{% if repo.projectLink != "#" %}
-			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
-			{% endif %}
-		</div>
 	</div>
 	</div>
 {% elsif whichColumn == 1 %}
 <!-- second column -->
 <div class='col-md-1'> </div>
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+<div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+	<!-- button -->
+	<div class='button-container'>
+		<a class='button' href='{{repo.url}}'>Github</a>
+		{% if repo.projectLink != "#" %}
+		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
+		{% endif %}
+	</div>
 	<!-- language circles -->
 	<div class='languages'>
 	{% for language in repo.languages %}
@@ -75,18 +84,19 @@ title: Projects
 <div class='content'>
 	<div class='title'><b>{{ repo.repo_name }}</b></div>
 	<div class='description'>{{ repo.description }}</div>
-	<div class='button-container'>
-		<a class='button' href='{{repo.url}}'>Github</a>
-		{% if repo.projectLink != "#" %}
-		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
-		{% endif %}
-	</div>
 </div>
 </div>
 <div class='col-md-1'></div>
 {% elsif whichColumn == 2 %}
 <!-- third column -->
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+<div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+	<!-- button -->
+	<div class='button-container'>
+		<a class='button' href='{{repo.url}}'>Github</a>
+		{% if repo.projectLink != "#" %}
+		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
+		{% endif %}
+	</div>
 	<!-- language circles -->
 	<div class='languages'>
 	{% for language in repo.languages %}
@@ -99,12 +109,6 @@ title: Projects
 <div class='content'>
 	<div class='title'><b>{{ repo.repo_name }}</b></div>
 	<div class='description'>{{ repo.description }}</div>
-	<div class='button-container'>
-		<a class='button' href='{{repo.url}}'>Github</a>
-		{% if repo.projectLink != "#" %}
-		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
-		{% endif %}
-	</div>
 </div>
 </div>
 <div class='col-md-2 side-col'></div>

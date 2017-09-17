@@ -1,4 +1,6 @@
 // this sass is for project page content
+// SHOULD CHANGE NAME AND ONLY LOAD IN PROJECTS PAGE
+
 .main
   margin: 10px
 .repo
@@ -9,37 +11,56 @@
   display: inline-block
   .content
     margin: 0 10px 10px 0px
-    +medium-devices
-      margin: 0 0 10px 0
   .languages
     display: flex
-    +medium-devices
-      justify-content: center
   .title
     font-size: 18px
-    +medium-devices
-      text-align: center
   .button-container
-    +medium-devices
-      display: flex
-      justify-content: center
+    width: calc(100% - 30px)
+    height: 100%
+    display: none
     .button
       margin: 5px
+      //max-height depends on font size
+      max-height: 30px
       background-color: $medium-color
       padding: 3px 10px
       display: inline-block
       color: $lightess-color
+      z-index: 1000
       &:hover
         color: $darker-color
         background-color: $lightess-color
+  +medium-devices
+    .title
+      text-align: center
+    .content
+      margin: 0 0 10px 0
+    .languages
+      justify-content: center
+
+// hover and toggle repos
+.repo.repoHover:hover, .buttonToggle
+  .language, .content
+    filter: blur(5px) brightness(200%)
+  .button-container
+    display: flex
+    position: absolute
+    justify-content: center
+    align-items: center
+    .button:hover
+      color: $darker-color
+      background-color: $lightess-color
+
+// override bootstrap sizes for columns
 +medium-devices
   .col-md-2.repo
-    flex: 0 0 25.666667%
-    max-width: 25.666667%
+    flex: 0 0 25%
+    max-width: 25%
   .side-col
     flex: 0 0 6.5%
   .col-md-1
-    flex: 0 0 5.333333%
+    flex: 0 0 6%
 
 .filterTemp
   display: none
