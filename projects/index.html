@@ -38,7 +38,7 @@ title: Projects
 <div class='row'>
 	<!-- first column -->
 	<div class='col-md-2 side-col'></div>
-	<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+	<div class='col-md-2 repo repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 		<!-- button -->
 		<div class='button-container'>
 			<a class='button' href='{{repo.url}}'>Github</a>
@@ -63,7 +63,7 @@ title: Projects
 {% elsif whichColumn == 1 %}
 <!-- second column -->
 <div class='col-md-1'> </div>
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+<div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 	<!-- button -->
 	<div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
@@ -88,7 +88,7 @@ title: Projects
 <div class='col-md-1'></div>
 {% elsif whichColumn == 2 %}
 <!-- third column -->
-<div class='col-md-2 repo {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
+<div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 	<!-- button -->
 	<div class='button-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>

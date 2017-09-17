@@ -35,26 +35,36 @@
       &:hover
         color: $darker-color
         background-color: $lightess-color
-  &:hover
-    .language, .content
-      filter: blur(5px) brightness(200%)
-    .button-container
-      display: flex
-      position: absolute
-      justify-content: center
-      align-items: center
-      .button:hover
-        color: $darker-color
-        background-color: $lightess-color
-
+.repo.repoHover:hover,
+  .language, .content
+    filter: blur(5px) brightness(200%)
+  .button-container
+    display: flex
+    position: absolute
+    justify-content: center
+    align-items: center
+    .button:hover
+      color: $darker-color
+      background-color: $lightess-color
+.buttonToggle
+  .language, .content
+    filter: blur(5px) brightness(200%)
+  .button-container
+    display: flex
+    position: absolute
+    justify-content: center
+    align-items: center
+    .button:hover
+      color: $darker-color
+      background-color: $lightess-color
 +medium-devices
   .col-md-2.repo
-    flex: 0 0 25.666667%
-    max-width: 25.666667%
+    flex: 0 0 25%
+    max-width: 25%
   .side-col
     flex: 0 0 6.5%
   .col-md-1
-    flex: 0 0 5.333333%
+    flex: 0 0 6%
 
 .filterTemp
   display: none
@@ -68,3 +78,6 @@
   .avatar
     float: left
     margin-right: 10px
+
+.mobilenNoHover
+  pointer-events: none

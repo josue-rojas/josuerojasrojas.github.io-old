@@ -1,9 +1,38 @@
 ---
 ---
-
+hasTouch = false
 # check mobile (only after dom is loaded)
 isMobile = ->
   return $('.mobilecheck').css('display')=='none'
+# better check for mobile (checks if touch)
+document.addEventListener("DOMContentLoaded", ->
+  try
+    document.createEvent('TouchEvent')
+    document.documentElement.className += " touch"
+    hasTouch = true
+  catch error
+    document.documentElement.className += " no-touch"
+
+  # toggle for mobile (removes hover)
+  prevRepo = ''
+  if hasTouch
+    $('.repo').removeClass('repoHover')
+    $('.repo').on 'touchend',(event) ->
+      console.log('hello',event.target)
+      if $(event.target).is($('.button'))
+        return
+      $repo = $(event.target).closest('.repo')
+      if $repo.is(prevRepo)
+        if $repo.hasClass('buttonToggle')
+          $repo.removeClass('buttonToggle')
+        else
+          $repo.addClass('buttonToggle')
+      else
+        $(prevRepo).removeClass('buttonToggle')
+        $repo.addClass('buttonToggle')
+        prevRepo = $repo
+)
+
 
 # make rows for filters/sorting
 makeRows = (selectors) ->
