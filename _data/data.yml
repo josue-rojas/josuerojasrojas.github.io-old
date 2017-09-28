@@ -48,6 +48,17 @@
       datevalue: "1497843124"
       repo_name: "Bulletin-Board"
     - 
+      description: "Calendar for TTP question: uses postgres, javascript, ejs templating, bootstrap, and css (I think that's it)"
+      created: "2017-09-26T22:24:12Z"
+      url: "https://github.com/josuerojasrojas/CalenderTTP"
+      languages: 
+        JavaScript: 48.105970200143204
+        HTML: 41.048109379794745
+        CSS: 10.845920420062056
+      projectLink: "https://calendarttp.herokuapp.com"
+      datevalue: "1506482652"
+      repo_name: "CalenderTTP"
+    - 
       description: "Answers for Code2040 test thingy"
       created: "2016-10-29T00:39:57Z"
       url: "https://github.com/josuerojasrojas/Code2040"
@@ -66,14 +77,14 @@
       datevalue: "1480460874"
       repo_name: "DataAllocation"
     - 
-      description: "This is my portfolio in GitHub pages  using Jekyll"
+      description: "This is my portfolio in GitHub pages using liquid templating language(jekyll), sass, CoffeeScript, and python for getting data"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 14.49839447309526
-        CoffeeScript: 10.275372190327916
-        HTML: 37.66176899873504
-        CSS: 37.564464337841784
+        Python: 13.861341910122398
+        CoffeeScript: 13.92834807468954
+        HTML: 35.535602608773345
+        CSS: 36.674707406414726
       projectLink: "https://josuerojasrojas.github.io/"
       datevalue: "1500876695"
       repo_name: "josuerojasrojas.github.io"
