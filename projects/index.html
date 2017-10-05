@@ -41,11 +41,16 @@ coffee_custom: projects
 	<div class='col-md-2 side-col'></div>
 	<div class='col-md-2 repo repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 		<!-- button -->
-		<div class='button-container'>
+		<div class='hover-container'>
 			<a class='button' href='{{repo.url}}'>Github</a>
 			{% if repo.projectLink != "#" %}
 			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 			{% endif %}
+			<div class='language-bar'>
+				{% for language in repo.languages %}
+				<span class={{language[0]}} style='width:{{language[1]}}%;'></span>
+				{% endfor %}
+			</div>
 		</div>
 		<!-- language circles -->
 		<div class='languages'>
@@ -66,11 +71,16 @@ coffee_custom: projects
 <div class='col-md-1'> </div>
 <div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 	<!-- button -->
-	<div class='button-container'>
+	<div class='hover-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
 		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
+		<div class='language-bar'>
+			{% for language in repo.languages %}
+			<span class={{language[0]}} style='width:{{language[1]}}%;'></span>
+			{% endfor %}
+		</div>
 	</div>
 	<!-- language circles -->
 	<div class='languages'>
@@ -91,11 +101,16 @@ coffee_custom: projects
 <!-- third column -->
 <div class='col-md-2 repo  repoHover {% for language in repo.languages %} {{ language[0] }} {% endfor %}' data-name='{{ repo.repo_name | downcase }}' data-date='{{repo.datevalue}}'>
 	<!-- button -->
-	<div class='button-container'>
+	<div class='hover-container'>
 		<a class='button' href='{{repo.url}}'>Github</a>
 		{% if repo.projectLink != "#" %}
 		<a class='button' href='{{repo.projectLink}}'>Project Link</a>
 		{% endif %}
+		<div class='language-bar'>
+			{% for language in repo.languages %}
+			<span class={{language[0]}} style='width:{{language[1]}}%;'></span>
+			{% endfor %}
+		</div>
 	</div>
 	<!-- language circles -->
 	<div class='languages'>
