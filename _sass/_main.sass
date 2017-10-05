@@ -15,17 +15,34 @@
     display: flex
   .title
     font-size: 18px
-  .button-container
-    width: calc(100% - 30px)
+  .hover-container
+    +langauge-colors
+    width: 100%
     height: 100%
+    margin-left: -15px
     display: none
+    position: absolute
+    justify-content: center
+    align-items: center
+    .language-bar
+      display: flex
+      margin-top: auto
+      width: 100%
+      span
+        float: left
+        height: 5px
+    .button-wrapper
+      position: absolute
+      display: flex
+      justify-content: center
     .button
+      // position: absolute
       margin: 5px
       //max-height depends on font size
       max-height: 30px
       background-color: $medium-color
       padding: 3px 10px
-      display: inline-block
+      display: block
       color: $lightess-color
       z-index: 1000
       &:hover
@@ -42,12 +59,11 @@
 // hover and toggle repos
 .repo.repoHover:hover, .buttonToggle
   .language, .content
-    filter: blur(5px) brightness(200%)
-  .button-container
+    opacity: 0.2
+  .content
+    color: $darker-color
+  .hover-container
     display: flex
-    position: absolute
-    justify-content: center
-    align-items: center
     .button:hover
       color: $darker-color
       background-color: $lightess-color

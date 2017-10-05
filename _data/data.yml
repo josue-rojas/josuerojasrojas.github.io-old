@@ -48,13 +48,14 @@
       datevalue: "1497843124"
       repo_name: "Bulletin-Board"
     - 
-      description: "Calendar for TTP question: uses postgres, javascript, ejs templating, bootstrap, and css (I think that's it)"
+      description: "Calendar and TTP question: uses postgres, javascript, ejs templating, bootstrap, and css for calendar and python for the other questions."
       created: "2017-09-26T22:24:12Z"
       url: "https://github.com/josuerojasrojas/CalenderTTP"
       languages: 
-        JavaScript: 48.105970200143204
-        HTML: 41.048109379794745
-        CSS: 10.845920420062056
+        Python: 15.450399087799315
+        JavaScript: 38.69251235271759
+        HTML: 36.447304121192374
+        CSS: 9.409784438290709
       projectLink: "https://calendarttp.herokuapp.com"
       datevalue: "1506482652"
       repo_name: "CalenderTTP"
