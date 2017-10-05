@@ -31,9 +31,12 @@
       span
         float: left
         height: 5px
-        display: inline-block
-    .button
+    .button-wrapper
       position: absolute
+      display: flex
+      justify-content: center
+    .button
+      // position: absolute
       margin: 5px
       //max-height depends on font size
       max-height: 30px
@@ -55,12 +58,10 @@
 
 // hover and toggle repos
 .repo.repoHover:hover, .buttonToggle
-  .language
-    span
-      background-color: $medium-color
+  .language, .content
+    opacity: 0.2
   .content
-    color: black
-    // filter: blur(5px) brightness(200%)
+    color: $darker-color
   .hover-container
     display: flex
     .button:hover
