@@ -14,11 +14,11 @@ import dateutil.parser as dp
 # ge languages_url better language from this compile a list of languages
 '''
 ignore = ['GoodCause', 'TTP-Techninal-Questions'] #repos to ignore
-repos = requests.get('https://api.github.com/users/josuerojasrojas/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
+user = 'josuerojasrojas'
+basicInfo = requests.get('https://api.github.com/users/'+user,auth=('josuerojasrojas',os.environ['gittoken'])).json()
+repos = requests.get('https://api.github.com/users/'+user+'/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
 allLanguages = set([])
 
-def getAvatar():
-    return repos[0]['owner']['avatar_url']
 
 def languagePercent(langs):
     total = 0
@@ -66,7 +66,9 @@ def organizeData(repoNames, htmlURL, repoDesc, createAt, languages, projectLink,
         'datevalue': datevalue[i]
         })
     dataJson = {
-        'avatar_url': getAvatar(),
+        'fullname': basicInfo['name'],
+        'username': user,
+        'avatar_url': basicInfo['avatar_url'],
         'languages':list(allLanguages),
         'repos': repoJson
     }
