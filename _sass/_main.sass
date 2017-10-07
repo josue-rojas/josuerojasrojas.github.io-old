@@ -15,6 +15,9 @@
     display: flex
   .title
     font-size: 18px
+  .date
+    font-size: 11px
+
   .hover-container
     +langauge-colors
     width: 100%
@@ -51,8 +54,10 @@
         color: $darker-color
         background-color: $lightess-color
   +medium-devices
-    .title
+    .title, .date
       text-align: center
+    .date
+      margin: 2px 0px
     .content
       margin: 0 0 10px 0
     .languages
