@@ -47,9 +47,15 @@ coffee_custom: projects
 	<!-- button -->
 	<div class='hover-container'>
 		<div class='button-wrapper'>
-			<a class='button' href='{{repo.url}}'>Github</a>
+			<a class='button' href='{{repo.url}}'>
+				<img class='no-hover' src='{{ site.url }}/resources/images/github_logo.png'>
+				<img class='hover' src='{{ site.url }}/resources/images/github_logo_hover.png'>
+			</a>
 			{% if repo.projectLink != "#" %}
-			<a class='button' href='{{repo.projectLink}}'>Project Link</a>
+			<a class='button' href='{{repo.projectLink}}'>
+				<img class='no-hover' src='{{ site.url }}/resources/images/link_logo.png'>
+				<img class='hover' src='{{ site.url }}/resources/images/link_logo_hover.png'>
+			</a>
 			{% endif %}
 		</div>
 		<div class='language-bar'>

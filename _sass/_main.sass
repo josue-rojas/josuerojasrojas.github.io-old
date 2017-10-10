@@ -42,17 +42,17 @@
       justify-content: center
       align-items: center
     .button
-      margin: 5px
+      .hover
+        display: none
+      img
+        width: 69px
+        margin-top: -20px
+      margin: 3px
       //max-height depends on font size
       max-height: 30px
-      background-color: $medium-color
       padding: 3px 10px
       display: block
-      color: $lightess-color
       z-index: 1000
-      &:hover
-        color: $darker-color
-        background-color: $lightess-color
   +medium-devices
     .title, .date
       text-align: center
@@ -72,9 +72,10 @@
   .hover-container
     display: flex
     .button:hover
-      color: $darker-color
-      background-color: $lightess-color
-
+      .no-hover
+        display: none
+      .hover
+        display: inherit
 // override bootstrap sizes for columns
 +medium-devices
   .col-md-2.repo
