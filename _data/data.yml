@@ -63,15 +63,6 @@
       datevalue: "1506482652"
       repo_name: "CalenderTTP"
     - 
-      description: "Answers for Code2040 test thingy"
-      created: "2016-10-29T00:39:57Z"
-      url: "https://github.com/josuerojasrojas/Code2040"
-      languages: 
-        Python: 100
-      projectLink: "#"
-      datevalue: "1477719597"
-      repo_name: "Code2040"
-    - 
       description: "OS Class Project simulating and measuring fragmentation for contiguous and linked data."
       created: "2016-11-29T18:07:54Z"
       url: "https://github.com/josuerojasrojas/DataAllocation"
@@ -85,10 +76,10 @@
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 13.23353804162402
-        CoffeeScript: 13.297509382463325
-        HTML: 37.956328897987035
-        CSS: 35.51262367792562
+        Python: 14.760415250011333
+        CoffeeScript: 14.134820254771297
+        HTML: 33.288000362663766
+        CSS: 37.8167641325536
       projectLink: "https://josuerojasrojas.github.io/"
       datevalue: "1500876695"
       repo_name: "josuerojasrojas.github.io"

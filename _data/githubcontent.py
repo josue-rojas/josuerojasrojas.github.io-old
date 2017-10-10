@@ -13,7 +13,7 @@ import dateutil.parser as dp
 # get language
 # ge languages_url better language from this compile a list of languages
 '''
-ignore = ['GoodCause', 'TTP-Techninal-Questions'] #repos to ignore
+ignore = ['GoodCause', 'TTP-Techninal-Questions','Code2040'] #repos to ignore
 user = 'josuerojasrojas'
 basicInfo = requests.get('https://api.github.com/users/'+user,auth=('josuerojasrojas',os.environ['gittoken'])).json()
 repos = requests.get('https://api.github.com/users/'+user+'/repos',auth=('josuerojasrojas',os.environ['gittoken'])).json()
