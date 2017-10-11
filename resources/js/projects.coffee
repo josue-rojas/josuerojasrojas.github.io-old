@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", ->
         else
           $('.buttonToggle').removeClass('buttonToggle')
           $repo.addClass('buttonToggle')
+      # fix the links not working when clicked on images...
+      $(display+' .repo .hover-container a').on 'touchend', (event) ->
+        event.stopPropagation()
   repoMobileTogg('.main.filter')
 )
 
