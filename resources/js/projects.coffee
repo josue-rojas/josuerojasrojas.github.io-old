@@ -21,10 +21,6 @@ document.addEventListener("DOMContentLoaded", ->
     if hasTouch
       $('.repo').removeClass('repoHover')
       $(display + ' .repo').on 'touchend',(event) ->
-        # will remove this if the stopPropagation does this already....
-        # # be able to click buttons....
-        # if $(event.target).is($('.button'))
-        #   return
         $repo = $(event.target).closest('.repo')
         $hoverCont = $repo.find('.hover-container')
         if $repo.hasClass('buttonToggle')
@@ -77,25 +73,24 @@ makeRows = (selectors) ->
 displayOn = '.main.filter' # holds which filter is on
 # stuff to do when fading the display for filter ot sorting (#smoothfade)(depends on displayOn created before function)
 fadeFilter = (insertHTML) ->
-  console.log(displayOn)
-  $(displayOn).fadeOut(300,->
+  $(displayOn).fadeOut 300, ->
     displayOn = '.filterTemp'
     $filterTemp = $(displayOn)
     $filterTemp.html('')
     $filterTemp.append(insertHTML)
     repoMobileTogg(displayOn)
     $filterTemp.fadeIn(400)
-    )
+
 
 
 # filter for languages
 window.filterLanguage = (language) ->
   # show all
   if language == 'repo'
-    $(displayOn).fadeOut(300, ->
+    $(displayOn).fadeOut 300, ->
       $('.main.filter').fadeIn(400)
       displayOn = '.main.filter'
-      )
+
     return
   insertHTML = makeRows($('.main.filter').find('.repo.'+language))
   fadeFilter(insertHTML)
