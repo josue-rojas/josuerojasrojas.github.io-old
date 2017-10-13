@@ -21,15 +21,26 @@ document.addEventListener("DOMContentLoaded", ->
     if hasTouch
       $('.repo').removeClass('repoHover')
       $(display + ' .repo').on 'touchend',(event) ->
-        # be able to click buttons....
-        if $(event.target).is($('.button'))
-          return
+        # will remove this if the stopPropagation does this already....
+        # # be able to click buttons....
+        # if $(event.target).is($('.button'))
+        #   return
         $repo = $(event.target).closest('.repo')
+        $hoverCont = $repo.find('.hover-container')
         if $repo.hasClass('buttonToggle')
-          $repo.removeClass('buttonToggle')
+          $hoverCont.fadeOut 150, ->
+            $repo.removeClass('buttonToggle')
+
         else
-          $('.buttonToggle').removeClass('buttonToggle')
-          $repo.addClass('buttonToggle')
+          $currentOn = $('.buttonToggle')
+          if $currentOn.length > 0
+            $currentOn.find('.hover-container').fadeOut 150, ->
+              $currentOn.removeClass('buttonToggle')
+              $repo.addClass('buttonToggle')
+              $hoverCont.fadeIn(400).css('display','flex')
+          else
+            $repo.addClass('buttonToggle')
+            $hoverCont.fadeIn(400).css('display','flex')
       # fix the links not working when clicked on images...
       $(display+' .repo .hover-container a').on 'touchend', (event) ->
         event.stopPropagation()
