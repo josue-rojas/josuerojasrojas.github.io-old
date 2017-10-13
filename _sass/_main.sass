@@ -70,12 +70,15 @@
   .content
     color: $darker-color
   .hover-container
-    // display: flex
     .button:hover
       .no-hover
         display: none
       .hover
         display: inherit
+.repo.repoHover:hover
+  .hover-container
+    display: flex
+    
 // override bootstrap sizes for columns
 +medium-devices
   .col-md-2.repo
