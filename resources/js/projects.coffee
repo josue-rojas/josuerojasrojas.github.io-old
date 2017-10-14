@@ -41,6 +41,46 @@ document.addEventListener("DOMContentLoaded", ->
       $(display+' .repo .hover-container a').on 'touchend', (event) ->
         event.stopPropagation()
   repoMobileTogg('.main.filter')
+
+  # slide show thingy for languages showing
+  currentLang = 0
+  hover = false
+  changeLang = ''
+  window.languageInfo = ($languages)->
+    if !hover
+      return
+    console.log('hellooooo')
+    totalLangs = $languages.length
+    if totalLangs > 1
+      for lang in $languages
+        $(lang).fadeOut(0)
+      currentLang++
+      if totalLangs <= currentLang
+        currentLang = 0
+    # console.log(hover)
+    # console.log($($languages[currentLang]))
+    $($languages[currentLang]).fadeIn(300).css('display', 'flex')
+    if hover
+      console.log('hellohihihih')
+      changeLang = setTimeout(languageInfo, 2000, $languages)
+      # setInterval(languageInfo($languages), 2000)
+    return
+
+  enterHover = (event) ->
+    console.log(hover)
+    $languages = $(event.target).closest('.repo.repoHover').find('.language-info')
+    console.log('hellloww')
+    if $languages.length > 0
+      hover = true
+      languageInfo($languages)
+    # return
+  exitHover = ->
+    currentLang = 0
+    console.log('exitt')
+    clearTimeout(changeLang)
+    hover = false
+  $('.repo.repoHover').hover(enterHover, exitHover)
+
 )
 
 
