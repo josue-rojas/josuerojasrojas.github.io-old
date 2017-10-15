@@ -59,7 +59,7 @@ coffee_custom: projects
 			{% endif %}
 		</div>
 		{% for language in repo.languages %}
-		<div class='language-info'data-language='{{language[0]}}'><span>{{language[0]}} {{language[1] | ceil}}%</span></div>
+		<div class='language-info' data-language='{{language[0]}}'><span>{{language[0]}} {{language[1] | ceil}}%</span></div>
 		{% endfor %}
 		<div class='language-bar'>
 			{% for language in repo.languages %}
@@ -70,7 +70,7 @@ coffee_custom: projects
 	<!-- language circles -->
 	<div class='languages'>
 	{% for language in repo.languages %}
-		<div class='language {{ language[0] }}-Order'>
+		<div class='language {{ language[0] }}-Order' data-language='{{language[0]}}'>
 			<span class='{{ language[0] }}'></span>
 		</div>
 	{% endfor %}

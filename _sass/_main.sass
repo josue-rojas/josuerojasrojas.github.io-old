@@ -10,9 +10,20 @@
   margin: 10px 0
   display: inline-block
   .content
+    +prefix(transition, color 150ms)
     margin: 0 10px 10px 0px
   .languages
+    +small-devices
+      margin-top: 5px
+    +medium-devices
+      margin-top: 0
     display: flex
+  .description
+    margin-bottom: 15px
+    +medium-devices
+      margin-bottom: 0
+    span
+      +prefix(transition, opacity 400ms)
   .title
     font-size: 18px
   .date
@@ -31,20 +42,23 @@
       width: 100%
       height: 100%
       position: absolute
-      // display: flex
       display: none
       span
         width: 100%
         margin-top: auto
         margin-bottom: 5px
         text-align: center
-        font-size: 12px
+        font-size: 11px
     .language-bar
       width: 100%
       height: 100%
       position: absolute
       display: flex
+      .active
+        opacity: 1
       span
+        opacity: 0.3
+        +prefix(transition, opacity 400ms)
         margin-top: auto
         float: left
         height: 5px
@@ -60,7 +74,7 @@
         display: none
       img
         width: 65px
-        margin-top: -20px
+        margin-top: -25px
       margin: 3px
       //max-height depends on font size
       max-height: 30px
@@ -81,6 +95,8 @@
 .repo.repoHover:hover, .buttonToggle
   .language, .content
     opacity: 0.2
+  .language.active
+      opacity: 1
   .content
     color: $darker-color
   .hover-container
