@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", ->
         if $repo.hasClass('buttonToggle')
           $hoverCont.fadeOut 150, ->
             $repo.removeClass('buttonToggle')
-
         else
           $currentOn = $('.buttonToggle')
           if $currentOn.length > 0
@@ -41,6 +40,35 @@ document.addEventListener("DOMContentLoaded", ->
       $(display+' .repo .hover-container a').on 'touchend', (event) ->
         event.stopPropagation()
   repoMobileTogg('.main.filter')
+
+  # slide show thingy for languages showing
+  currentLang = 0
+  timoutLangChange = ''
+  window.languageInfo = ($languages)->
+    totalLangs = $languages.length
+    $languages.fadeOut(0)
+    currentLang++
+    if totalLangs <= currentLang
+      currentLang = 0
+    $curLang = $($languages[currentLang])
+    $('.active').removeClass('active')
+    $curLang.closest('.repo').find('*[data-language="'+$curLang.data('language')+ '"]').addClass('active')
+    $curLang.fadeIn(300).css('display', 'flex')
+    timoutLangChange = if totalLangs > 1 then setTimeout(languageInfo, 2500, $languages) else ''
+    return
+  # functions for entering and exiting hover
+  enterHover = (event) ->
+    $languages = $(event.target).closest('.repo').find('.language-info')
+    if $languages.length > 0
+      languageInfo($languages)
+  exitHover = ->
+    currentLang = 0
+    clearTimeout(timoutLangChange)
+  # enable the languages showing on hover
+  window.languageShow = (display) ->
+    $(display + ' .repo').hover(enterHover, exitHover)
+  languageShow('.main.filter')
+
 )
 
 
@@ -79,6 +107,7 @@ fadeFilter = (insertHTML) ->
     $filterTemp.html('')
     $filterTemp.append(insertHTML)
     repoMobileTogg(displayOn)
+    languageShow(displayOn)
     $filterTemp.fadeIn(400)
 
 
