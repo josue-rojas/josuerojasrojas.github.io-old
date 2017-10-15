@@ -59,7 +59,8 @@ coffee_custom: projects
 			{% endif %}
 		</div>
 		{% for language in repo.languages %}
-		<div class='language-info' data-language='{{language[0]}}'><span>{{language[0]}} {{language[1] | ceil}}%</span></div>
+		{% assign lang = language[0] %}
+		<div class='language-info' data-language='{{language[0]}}' data-order='{{ site.data.defaults[lang] }}'><span>{{language[0]}} {{language[1] | ceil}}%</span></div>
 		{% endfor %}
 		<div class='language-bar'>
 			{% for language in repo.languages %}

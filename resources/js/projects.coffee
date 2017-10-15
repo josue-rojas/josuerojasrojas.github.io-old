@@ -47,10 +47,9 @@ document.addEventListener("DOMContentLoaded", ->
   window.languageInfo = ($languages)->
     totalLangs = $languages.length
     $languages.fadeOut(0)
-    currentLang++
     if totalLangs <= currentLang
       currentLang = 0
-    $curLang = $($languages[currentLang])
+    $curLang = $($languages[currentLang++])
     $('.active').removeClass('active')
     $curLang.closest('.repo').find('*[data-language="'+$curLang.data('language')+ '"]').addClass('active')
     $curLang.fadeIn(300).css('display', 'flex')
@@ -58,7 +57,9 @@ document.addEventListener("DOMContentLoaded", ->
     return
   # functions for entering and exiting hover
   enterHover = (event) ->
-    $languages = $(event.target).closest('.repo').find('.language-info')
+    $languages = $(event.target).closest('.repo').find('.language-info').sort((a,b) ->
+      return $(a).data('order') > $(b).data('order')
+      )
     if $languages.length > 0
       languageInfo($languages)
   exitHover = ->
