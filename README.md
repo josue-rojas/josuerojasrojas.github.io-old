@@ -76,7 +76,8 @@ Anyway to see what I am currently doing to this site check github issues for thi
 - [Jekyll Structures](https://jekyllrb.com/docs/structure/)
 - [Tutorial for basic start](http://jmcglone.com/guides/github-pages/)
 - [CoffeeScript on Jekyll](http://www.mattjmorrison.com/today-i-learned/2014/10/10/learned.html)
+- [Jekyll use data to get other data](https://stackoverflow.com/questions/36406583/jekyll-get-specific-data-data-based-on-an-name)
 - [json to yaml](https://www.npmjs.com/package/json2yaml)
 - [github colors](https://github.com/ozh/github-colors/blob/master/colors.json)
-
+- [sort with jquery](https://stackoverflow.com/questions/13490391/jquery-sort-elements-using-data-id)
 __(!idea maybe have a script to log all websites....)__
