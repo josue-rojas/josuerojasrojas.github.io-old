@@ -3,8 +3,8 @@
     {% for social in site.data.aboutme.social %}
       {% if social[1] != '#' %}
         <a  class='button' href='{{social[1]}}'>
-          <img class='no-hover' src='{{site.url }}/resources/images/{{social[0]}}.png'>
-          <img class='hover' src='{{site.url }}/resources/images/{{social[0]}}_hover.png'>
+          {% assign site = social[0] | append: '_icon.html' %}
+          {% include {{site}} %}
         </a>
       {% endif %}
     {% endfor %}
