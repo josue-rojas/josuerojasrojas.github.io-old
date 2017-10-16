@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", ->
     return
   # functions for entering and exiting hover
   enterHover = (event) ->
-    $languages = $(event.target).closest('.repo').find('.language-info').sort((a,b) ->
-      return if $(a).data('order') > $(b).data('order') then 1 else -1
-      )
+    $languages = $(event.target).closest('.repo').find('.language-info').sort (a,b) ->
+      return $(a).data('order') - $(b).data('order')
+
     if $languages.length > 0
       languageInfo($languages)
   exitHover = ->
