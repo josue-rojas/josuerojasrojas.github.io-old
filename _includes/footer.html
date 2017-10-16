@@ -1,8 +1,23 @@
-<div class='footer'>
-  <ul>
-    <li><a href='https://github.com/josuerojasrojas/josuerojasrojas.github.io'>Source</a></li>
-    <li><a href='https://www.linkedin.com/in/josuerojasz/'>LinkeIn</a></li>
-    <li><a href='https://goo.gl/yFs4U6'>Resume</a></li>
-    <li><a href='/readme'>Readme</a></li>
-  </ul>
-</div>
+<!--
+todo
+- add logos for social sites
+- add data from yml (social sites)
+- make this an issue
+- readme and source should be in another div?
+ -->
+<footer class='footer'>
+  <div class='footer-links'>
+  <!-- gonna make this more universal -->
+  <!-- <span>
+    <a href="https://www.linkedin.com/in/josuerojasz/">LinkeIn</a>
+  </span> -->
+  <div class='copyright'>
+    <span>© {{ 'now' | date: "%Y" }} Josue Rojas</span>
+    <span>
+      <a href="https://github.com/josuerojasrojas/josuerojasrojas.github.io">Source</a>
+    </span>
+    <span>
+      <a href="/readme">Readme</a>
+    </span>
+  </div>
+</footer>

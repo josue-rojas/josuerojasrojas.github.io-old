@@ -9,6 +9,7 @@ isMobile = ->
   return $('.mobilecheck').css('display')=='none'
 # better check for mobile (checks if touch)
 document.addEventListener("DOMContentLoaded", ->
+  # check if it has touch (mobile)
   try
     document.createEvent('TouchEvent')
     document.documentElement.className += " touch"
@@ -18,6 +19,9 @@ document.addEventListener("DOMContentLoaded", ->
 
   # toggle for mobile (removes hover)
   window.repoMobileTogg = (display) ->
+    # fix footer for projects page being big (should really be checking size but this is fine for my page)
+    $('.footer').addClass('projects-footer')
+
     if hasTouch
       $('.repo').removeClass('repoHover')
       $(display + ' .repo').on 'touchend',(event) ->
@@ -58,6 +62,8 @@ document.addEventListener("DOMContentLoaded", ->
   # functions for entering and exiting hover
   enterHover = (event) ->
     $languages = $(event.target).closest('.repo').find('.language-info').sort((a,b) ->
+      console.log('inside sort > A', $(a).data('order'))
+      console.log('inside sort > B', $(b).data('order'))
       return $(a).data('order') > $(b).data('order')
       )
     if $languages.length > 0
