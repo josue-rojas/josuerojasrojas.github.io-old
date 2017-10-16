@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", ->
 
   # toggle for mobile (removes hover)
   window.repoMobileTogg = (display) ->
-    # fix footer for projects page being big (should really be checking size but this is fine for my page)
-    $('.footer').addClass('projects-footer')
-
     if hasTouch
       $('.repo').removeClass('repoHover')
       $(display + ' .repo').on 'touchend',(event) ->

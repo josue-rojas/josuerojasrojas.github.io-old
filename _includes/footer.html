@@ -21,3 +21,11 @@ todo
     </span>
   </div>
 </footer>
+
+<script>
+// set the footer in the right spot
+// later add to check if screen size change (rotation of mobile changes)
+  if($('body').height() > $(window).height()){
+    $('.footer').addClass('content-footer')
+  }
+</script>
