@@ -1,10 +1,3 @@
-<!--
-todo
-- add logos for social sites
-- add data from yml (social sites)
-- make this an issue
-- readme and source should be in another div?
- -->
 <footer class='footer'>
   <div class='footer-links'>
   <!-- gonna make this more universal -->
@@ -24,8 +17,14 @@ todo
 
 <script>
 // set the footer in the right spot
-// later add to check if screen size change (rotation of mobile changes)
-  if($('body').height() > $(window).height()){
-    $('.footer').addClass('content-footer')
+  footerReposition = function(){
+    if($('body').height() > $(window).height()){
+      $('.footer').addClass('content-footer')
+    }
+    else{
+      $('.footer').removeClass('content-footer')
+    }
   }
+  footerReposition
+  $(window).resize(footerReposition)
 </script>
