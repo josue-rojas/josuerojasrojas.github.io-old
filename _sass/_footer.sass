@@ -7,8 +7,18 @@
   text-align: center
   font-size: 14px
   .footer-links
+    img
+      width: 28px
+    .button
+      .hover
+        display: none
+    .button:hover
+      .no-hover
+        display: none
+      .hover
+        display: inherit
     margin-bottom: 3px
-    span:not(:last-child)
+    span,a:not(:last-child)
       margin-right: 5px
   .copyright
     font-size: 12px

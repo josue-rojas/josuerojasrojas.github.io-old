@@ -1,9 +1,14 @@
 <footer class='footer'>
   <div class='footer-links'>
-  <!-- gonna make this more universal -->
-  <!-- <span>
-    <a href="https://www.linkedin.com/in/josuerojasz/">LinkeIn</a>
-  </span> -->
+    {% for social in site.data.aboutme.social %}
+      {% if social[1] != '#' %}
+        <a  class='button' href='{{social[1]}}'>
+          <img class='no-hover' src='{{site.url }}/resources/images/{{social[0]}}.png'>
+          <img class='hover' src='{{site.url }}/resources/images/{{social[0]}}_hover.png'>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
   <div class='copyright'>
     <span>© {{ 'now' | date: "%Y" }} Josue Rojas</span>
     <span>
@@ -17,6 +22,7 @@
 
 <script>
 // set the footer in the right spot
+// should move this to the default CoffeeScript
   footerReposition = function(){
     if($('body').height()+ $('.footer').height() + $('.footer').outerHeight()> $(window).height()){
       $('.footer').addClass('content-footer')
