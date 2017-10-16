@@ -18,7 +18,7 @@
 <script>
 // set the footer in the right spot
   footerReposition = function(){
-    if($('body').height() > $(window).height()){
+    if($('body').height()+ $('.footer').height() + $('.footer').outerHeight()> $(window).height()){
       $('.footer').addClass('content-footer')
     }
     else{
