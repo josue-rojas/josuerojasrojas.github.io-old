@@ -1,35 +1,19 @@
 .footer
-  display: flex
-  width: 100vw
+  position: absolute
+  width: 100%
+  bottom: 0
+  padding: 1rem
   background-color: $darker-color
-  justify-content: center
-  // position: absolute
-  clear: both
-  // position: relative
-  // z-index: 10
-  // height: 3em
-  // margin-top: -3em
-  // bottom: 0
-  padding: 10px 0 20px 0
-  ul
-    overflow: hidden
-    list-style-type: none
-    margin: 0
-    padding: 0
-    margin: auto
+  text-align: center
+  font-size: 14px
+  .footer-links
+    margin-bottom: 3px
+    span:not(:last-child)
+      margin-right: 5px
+  .copyright
+    font-size: 12px
 
-  li
-    float: left
-    color: $lightess-color
-    border-right: 2px solid $medium-color
-    // border-radius: 5px
-    &:last-child
-      border-right: 0px
-  li a
-    display: block
-    color: $lightess-color
-    padding: 8px 16px
-    text-decoration: none
-    text-align: center
-    &:hover
-      color: $light-color
+// footer modified for projects page (content is bigger than than vh and percent...)
+.footer.projects-footer
+  margin-top: 10px
+  bottom: inherit
