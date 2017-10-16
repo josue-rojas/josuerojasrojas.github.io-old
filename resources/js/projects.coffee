@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", ->
   currentLang = 0
   timoutLangChange = ''
   window.languageInfo = ($languages)->
+    console.log('list inside info function',$languages)
     totalLangs = $languages.length
     $languages.fadeOut(0)
     if totalLangs <= currentLang
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", ->
       return $(a).data('order') > $(b).data('order')
       )
     if $languages.length > 0
+      console.log('list',$languages)
       languageInfo($languages)
   exitHover = ->
     currentLang = 0
