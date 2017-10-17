@@ -1,11 +1,18 @@
 <footer class='footer'>
   <div class='footer-links'>
-  <!-- gonna make this more universal -->
-  <!-- <span>
-    <a href="https://www.linkedin.com/in/josuerojasz/">LinkeIn</a>
-  </span> -->
+    {% for social in site.data.aboutme.social %}
+      {% if social[1] != '#' %}
+        <a  class='button' href='{{social[1]}}'>
+          {% assign site = social[0] | append: '_icon.html' %}
+          {% include {{site}} %}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
   <div class='copyright'>
     <span>© {{ 'now' | date: "%Y" }} Josue Rojas</span>
+  </div>
+  <div>
     <span>
       <a href="https://github.com/josuerojasrojas/josuerojasrojas.github.io">Source</a>
     </span>
@@ -17,13 +24,28 @@
 
 <script>
 // set the footer in the right spot
+// should move this to the default CoffeeScript
+  let state = true // the state determines which it was before if true then it was in the else before but if false then it was in the if before and it will not go there it will only go in the else
   footerReposition = function(){
-    if($('body').height()+ $('.footer').height() + $('.footer').outerHeight()> $(window).height()){
-      $('.footer').addClass('content-footer')
+    $footer = $('.footer')
+    if($('body').height()+ $footer.outerHeight() + $footer.height() > $(window).outerHeight()){
+      if(state){
+        $footer.fadeOut(300, function(){
+          $footer.addClass('content-footer')
+          $footer.fadeIn(400)
+        })
+        state = false
+      }
     }
     else{
-      $('.footer').removeClass('content-footer')
-    }
+      if(!state){
+        $footer.fadeOut(300, function(){
+          $footer.removeClass('content-footer')
+          $footer.fadeIn(400)
+        })
+        state = true
+      }
+  }
   }
   footerReposition()
   $(window).resize(footerReposition)

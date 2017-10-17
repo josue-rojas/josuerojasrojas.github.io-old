@@ -110,7 +110,9 @@ fadeFilter = (insertHTML) ->
     $filterTemp.append(insertHTML)
     repoMobileTogg(displayOn)
     languageShow(displayOn)
-    $filterTemp.fadeIn(400)
+    $filterTemp.fadeIn 400, ->
+      # risky cause this doesnt exist only after dom
+      footerReposition()
 
 
 
@@ -119,7 +121,11 @@ window.filterLanguage = (language) ->
   # show all
   if language == 'repo'
     $(displayOn).fadeOut 300, ->
-      $('.main.filter').fadeIn(400)
+      $('.main.filter').fadeIn 400, ->
+        # risky cause this doesnt exist only after dom
+        footerReposition()
+        # $('footer').fadeOut 300, ->
+        #   $('footer').fadeIn 400, ->
       displayOn = '.main.filter'
 
     return

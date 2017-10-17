@@ -13,31 +13,16 @@ title: Home
       <a href='https://goo.gl/yFs4U6'>Resume</a>
     </div>
   </div>
-  <div class='content'>
-    About Me:
-    <br>
-    Coming soon!?!?!?!...
-    <div class='redirect'>
-    REDIRECTEING TO PROJECTS PAGE
+  <div class='info'>
+    {% for content in site.data.aboutme.content %}
+      <div class='section'>
+        <h3>{{content[0]}}</h3>
+        <p>{{content[1]}}</p>
+      </div>
+    {% endfor %}
   </div>
-  </div>
-  <script>
-    dot = 0
-    function dots(redirect=false){
-      dot++
-      $('.redirect').text($('.redirect').text()+'.')
-      if(dot == 20){
-        //cause this is under construction
-        window.location='/projects'
-        redirect = true
-      }
-      if(redirect){
-        return
-      }
-      else setTimeout(function(){
-        dots()
-      },100)
-    }
-    dots()
-  </script>
 </div>
+<script>
+  // need to finish styling before showing
+  window.location='/projects'
+</script>
