@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", ->
             $hoverCont.fadeIn 400, ->
               enterHover($event)
               $hoverCont.css('display','flex')
-            # $hoverCont.fadeIn(400, enterHover($event)).css('display','flex')
       # fix the links not working when clicked on images...
       $(display+' .repo .hover-container a').on 'touchend', (event) ->
         event.stopPropagation()
