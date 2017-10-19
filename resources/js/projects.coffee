@@ -9,6 +9,7 @@ isMobile = ->
   return $('.mobilecheck').css('display')=='none'
 # better check for mobile (checks if touch)
 document.addEventListener("DOMContentLoaded", ->
+  # ---------------------------------------------------
   # check if it has touch (mobile)
   try
     document.createEvent('TouchEvent')
@@ -16,38 +17,13 @@ document.addEventListener("DOMContentLoaded", ->
     hasTouch = true
   catch error
     document.documentElement.className += " no-touch"
-
-  # toggle for mobile (removes hover)
-  window.repoMobileTogg = (display) ->
-    if hasTouch
-      $('.repo').removeClass('repoHover')
-      $(display + ' .repo').on 'touchend',(event) ->
-        $repo = $(event.target).closest('.repo')
-        $hoverCont = $repo.find('.hover-container')
-        if $repo.hasClass('buttonToggle')
-          $hoverCont.fadeOut 150, ->
-            $repo.removeClass('buttonToggle')
-        else
-          $currentOn = $('.buttonToggle')
-          if $currentOn.length > 0
-            $currentOn.find('.hover-container').fadeOut 150, ->
-              $currentOn.removeClass('buttonToggle')
-              $repo.addClass('buttonToggle')
-              $hoverCont.fadeIn(400).css('display','flex')
-          else
-            $repo.addClass('buttonToggle')
-            $hoverCont.fadeIn(400).css('display','flex')
-      # fix the links not working when clicked on images...
-      $(display+' .repo .hover-container a').on 'touchend', (event) ->
-        event.stopPropagation()
-  repoMobileTogg('.main.filter')
-
+  # ---------------------------------------------------
   # slide show thingy for languages showing
   currentLang = 0
   timoutLangChange = ''
   window.languageInfo = ($languages)->
     totalLangs = $languages.length
-    $languages.fadeOut(0)
+    $languages.css('display','none')
     if totalLangs <= currentLang
       currentLang = 0
     $curLang = $($languages[currentLang++])
@@ -56,11 +32,10 @@ document.addEventListener("DOMContentLoaded", ->
     $curLang.fadeIn(300).css('display', 'flex')
     timoutLangChange = if totalLangs > 1 then setTimeout(languageInfo, 2500, $languages) else ''
     return
-  # functions for entering and exiting hover
+    # functions for entering and exiting hover
   enterHover = (event) ->
     $languages = $(event.target).closest('.repo').find('.language-info').sort (a,b) ->
       return $(a).data('order') - $(b).data('order')
-
     if $languages.length > 0
       languageInfo($languages)
   exitHover = ->
@@ -68,9 +43,44 @@ document.addEventListener("DOMContentLoaded", ->
     clearTimeout(timoutLangChange)
   # enable the languages showing on hover
   window.languageShow = (display) ->
-    $(display + ' .repo').hover(enterHover, exitHover)
+      return if hasTouch then false else $(display + ' .repo').hover(enterHover, exitHover)
   languageShow('.main.filter')
 
+  # ---------------------------------------------------
+  # toggle for mobile (removes hover)
+  window.repoMobileTogg = (display) ->
+    if hasTouch
+      $('.repo').removeClass('repoHover')
+      $(display + ' .repo').on 'touchend',(event) ->
+        $event = event
+        $repo = $(event.target).closest('.repo')
+        $hoverCont = $repo.find('.hover-container')
+        if $repo.hasClass('buttonToggle')
+          exitHover()
+          $hoverCont.fadeOut 150, ->
+            $hoverCont.find('.language-info').css('display','none') # removes stutter (need a better way)
+            $repo.removeClass('buttonToggle')
+        else
+          $currentOn = $('.buttonToggle')
+          if $currentOn.length > 0
+            exitHover()
+            $currentOn.find('.hover-container').fadeOut 150, ->
+              $currentOn.removeClass('buttonToggle')
+              $currentOn.find('.language-info').css('display','none') # removes stutter (need a better way)
+              $repo.addClass('buttonToggle')
+              $hoverCont.fadeIn 400, ->
+                enterHover($event)
+                $hoverCont.css('display','flex')
+          else
+            $repo.addClass('buttonToggle')
+            $hoverCont.fadeIn 400, ->
+              enterHover($event)
+              $hoverCont.css('display','flex')
+            # $hoverCont.fadeIn(400, enterHover($event)).css('display','flex')
+      # fix the links not working when clicked on images...
+      $(display+' .repo .hover-container a').on 'touchend', (event) ->
+        event.stopPropagation()
+  repoMobileTogg('.main.filter')
 )
 
 
@@ -97,7 +107,6 @@ makeRows = (selectors) ->
         insertHTML += '</div>'
       i++
     return insertHTML
-
 
 
 displayOn = '.main.filter' # holds which filter is on
