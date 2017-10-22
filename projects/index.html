@@ -3,34 +3,30 @@ layout: default
 title: Projects
 coffee_custom: projects
 ---
-<div class='submenu navbar'>
-<ul>
-	<li>
-		<!--Filter button-->
-		<div class="dropdown">
-  		<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Filter
-  		</button>
-  		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    		<a class="dropdown-item rainbow-circle-Order" href="#" onclick='filterLanguage("repo")'>All <span class='rainbow-circle'></span></a>
-				{% for language in site.data.data.languages %}
-    		<a class="dropdown-item {{language}}-Order" href="#" onclick='filterLanguage("{{language}}")'>{{language}} <span class='{{ language }}'></a>
-				{% endfor %}
-  		</div>
-		</div>
-		<!--Sort button-->
-		<div class="dropdown">
-  		<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Sort
-  		</button>
-  		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    		<a class="dropdown-item" href="#" onclick='sortRepos("name")'>Name</a>
-				<a class="dropdown-item" href="#" onclick='sortRepos("date")'>Date</a>
-  		</div>
-		</div>
-	</li>
-</ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark submenu">
+	<div class="navbar-collapse justify-content-md-center collapse" id="submenu">
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<!--Filter button-->
+        <a class="nav-link dropdown-toggle first-dropdown" href="#filter" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown">
+					<a class="dropdown-item rainbow-circle-Order" href="#" onclick='filterLanguage("repo")'>All <span class='rainbow-circle'></span></a>
+					{% for language in site.data.data.languages %}
+			    <a class="dropdown-item {{language}}-Order" href="#" onclick='filterLanguage("{{language}}")'>{{language}} <span class='{{ language }}'></a>
+					{% endfor %}
+        </div>
+      </li>
+			<li class="nav-item dropdown">
+				<a class='nav-link dropdown-toggle' href='#sort' id='sortD' data-toggle='dropdown' aira-haspopup='true' aria-expanded='false'>Sort</a>
+				<div class="dropdown-menu" aria-labelledby="sortD">
+					<a class="dropdown-item" href="#" onclick='sortRepos("name")'>Name</a>
+					<a class="dropdown-item" href="#" onclick='sortRepos("date")'>Date</a>
+        </div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
 <div class="main filter">
 {% for repo in site.data.data.repos %}
 {% assign whichColumn = forloop.index0 | modulo:3 %}

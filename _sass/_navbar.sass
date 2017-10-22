@@ -1,30 +1,52 @@
 //this sass is for navigation bar and sub navs
 
-
-.navbar
+// need to move this down
+nav
   background-color: $darker-color
-  width: 100vw
-  display: flex
-  flex-direction: column
-  justify-content: center
-  ul
-    // overflow: hidden
-    list-style-type: none
-    margin: 0
-    padding: 0
-    margin: auto
-  li
-    float: left
-    color: white
-  li a
-    border-radius: 5px
-    display: block
-    color: white
-    padding: 8px 16px
-    text-decoration: none
-    text-align: center
-    &:hover
+  .dropdown-menu
+    background-color: $darker-color
+    span
+      display: inline-block
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      float: right
+      margin-top: 2px
+    a
+      padding: .25rem 1rem
       color: $light-color
+      .rainbow-circle
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #dd00f3, #2b1de8, #1ddde8, #1de840, #e3e81d, #e8b71d, #e81d1d, #ff2400)
+        background-size: 3000% 100%
+        +prefix(animation, rainbow 20s ease infinite)
+      +langauge-colors
+    a:hover
+      color: $lightess-color
+      background-color: $darker-color
+// .navbar.submenu
+//   background-color: $darker-color
+//   width: 100vw
+//   display: flex
+//   flex-direction: column
+//   justify-content: center
+//   ul
+//     // overflow: hidden
+//     list-style-type: none
+//     margin: 0
+//     padding: 0
+//     margin: auto
+//   li
+//     float: left
+//     color: white
+//   li a
+//     border-radius: 5px
+//     display: block
+//     color: white
+//     padding: 8px 16px
+//     text-decoration: none
+//     text-align: center
+//     &:hover
+//       color: $light-color
 
 // this should be moved to projects sass
 .submenu

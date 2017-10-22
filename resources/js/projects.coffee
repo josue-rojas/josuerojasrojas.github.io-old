@@ -80,6 +80,15 @@ document.addEventListener("DOMContentLoaded", ->
       $(display+' .repo .hover-container a').on 'touchend', (event) ->
         event.stopPropagation()
   repoMobileTogg('.main.filter')
+
+  # ---------------------------------------------------
+  # toggle for navbar on mobile (probably could be shorter)
+  prevToggle = 'none' # stores which toogle is active, start with none
+  $('.navbar-toggler').click (event)->
+    $thisID = $(event.target).closest('.navbar-toggler').attr('id')
+    if prevToggle != $thisID and !$('#'+prevToggle).hasClass('collapsed')
+      $('#'+prevToggle).trigger('click')
+    prevToggle = $thisID
 )
 
 

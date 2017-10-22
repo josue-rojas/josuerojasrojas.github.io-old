@@ -21,32 +21,3 @@
     </span>
   </div>
 </footer>
-
-<script>
-// set the footer in the right spot
-// should move this to the default CoffeeScript
-  let state = true // the state determines which it was before if true then it was in the else before but if false then it was in the if before and it will not go there it will only go in the else
-  footerReposition = function(){
-    $footer = $('.footer')
-    if($('body').height()+ $footer.outerHeight() + $footer.height() > $(window).outerHeight()){
-      if(state){
-        $footer.fadeOut(300, function(){
-          $footer.addClass('content-footer')
-          $footer.fadeIn(400)
-        })
-        state = false
-      }
-    }
-    else{
-      if(!state){
-        $footer.fadeOut(300, function(){
-          $footer.removeClass('content-footer')
-          $footer.fadeIn(400)
-        })
-        state = true
-      }
-  }
-  }
-  footerReposition()
-  $(window).resize(footerReposition)
-</script>
