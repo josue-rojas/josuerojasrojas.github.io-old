@@ -2,6 +2,15 @@
 
 // need to move this down
 nav
+  svg
+    width: 25px
+    height: 25px
+  .setting-button
+    display: flex
+  .navbar-toggler
+    min-height: 40px
+  .nav-title
+    font-size: 18px
   background-color: $darker-color
   .dropdown-menu
     background-color: $darker-color
@@ -23,6 +32,16 @@ nav
     a:hover
       color: $lightess-color
       background-color: $darker-color
+  .toggle-name
+    display: none
+  +small-devices
+    .toggle-name
+      display: inline
+    .setting-button svg
+      margin-left: 5px
+  +large-devices
+    .nav-title
+      display: none
 // .navbar.submenu
 //   background-color: $darker-color
 //   width: 100vw

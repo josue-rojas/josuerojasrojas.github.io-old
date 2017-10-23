@@ -1,12 +1,13 @@
  <nav class="navbar navbar-expand-lg navbar-dark">
        <button id='mainToggle' class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
-         Menu
+         <span class='toggle-name'>Menu</span>
        </button>
+       <span class='nav-title'>{{page.title}}</span>
        {% if page.title == 'Projects'%}
-       <button id='submenuToggle' class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#submenu" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-         Options
-         <span class="navbar-toggler-icon"></span>
+       <button id='submenuToggle' class="navbar-toggler collapsed setting-button" type="button" data-toggle="collapse" data-target="#submenu" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class='toggle-name'>Options</span>
+         {% include svg/Gear.svg %}
        </button>
        {% endif %}
 
