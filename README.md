@@ -2,7 +2,7 @@
 # for routes in portfolio
 layout: default
 permalink: /readme
-title: readme
+title: Readme
 ---
 My attempt to make a generic portfolio which uses liquid templating language(jekyll), sass, CoffeeScript, and python for getting data.
 
@@ -86,5 +86,6 @@ __Anyway to see what I am currently doing to this site check github issues for t
 - [json to yaml](https://www.npmjs.com/package/json2yaml)
 - [github colors](https://github.com/ozh/github-colors/blob/master/colors.json)
 - [sort with jquery](https://stackoverflow.com/questions/13490391/jquery-sort-elements-using-data-id)
+- [Octicons (Github icons)](https://octicons.github.com)
 
 __(!idea maybe have a script to log all websites....)__

@@ -3,8 +3,8 @@
     {% for social in site.data.aboutme.social %}
       {% if social[1] != '#' %}
         <a  class='button' href='{{social[1]}}'>
-          {% assign site = social[0] | append: '_icon.html' %}
-          {% include {{site}} %}
+          {% assign site = social[0] | append: '_icon.svg' %}
+          {% include svg/{{site}} %}
         </a>
       {% endif %}
     {% endfor %}
