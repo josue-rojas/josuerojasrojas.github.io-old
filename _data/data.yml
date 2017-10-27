@@ -76,10 +76,10 @@
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
       languages: 
-        Python: 10.04767030601261
-        CoffeeScript: 20.52898662155928
-        HTML: 39.71705366753806
-        CSS: 29.70628940489005
+        Python: 11.299415487842838
+        CoffeeScript: 23.086500881956212
+        HTML: 31.048317365890775
+        CSS: 34.56576626431017
       projectLink: "https://josuerojasrojas.github.io/"
       datevalue: "1500876695"
       repo_name: "josuerojasrojas.github.io"
@@ -123,6 +123,19 @@
       projectLink: "#"
       datevalue: "1464660621"
       repo_name: "Revenge"
+    - 
+      description: "A showcase of sites that will be used to show our skills at web development, using modular website building concepts."
+      created: "2017-10-19T01:45:45Z"
+      url: "https://github.com/josuerojasrojas/Showcase"
+      languages: 
+        Python: 10.97694295368714
+        CoffeeScript: 39.98211091234347
+        HTML: 30.421387398131582
+        Shell: 2.479626316835619
+        CSS: 16.139932419002186
+      projectLink: "https://josuerojasrojas.github.io/Showcase"
+      datevalue: "1508395545"
+      repo_name: "Showcase"
     - 
       description: "Simon Game for android for Applied Science "
       created: "2016-07-12T20:41:26Z"
