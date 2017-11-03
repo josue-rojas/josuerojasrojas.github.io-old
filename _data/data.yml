@@ -113,6 +113,19 @@
       datevalue: "1462405117"
       repo_name: "Migration-of-Language-and-Income"
     - 
+      description: "A showcase of sites that will be used to show our skills at web development, using modular website building concepts."
+      created: "2017-10-19T01:45:45Z"
+      url: "https://github.com/josuerojasrojas/Modulos-Design"
+      languages: 
+        Python: 12.525366935674171
+        CoffeeScript: 15.649629524753408
+        HTML: 44.66468450611166
+        Shell: 1.703714191325688
+        CSS: 25.45660484213507
+      projectLink: "https://josuerojasrojas.github.io/Modulos-Design/"
+      datevalue: "1508395545"
+      repo_name: "Modulos-Design"
+    - 
       description: "A portfolio I made for TTP. Uses postgress database and heroku for hosting."
       created: "2017-06-16T16:03:31Z"
       url: "https://github.com/josuerojasrojas/Portfolio"
@@ -132,19 +145,6 @@
       projectLink: "#"
       datevalue: "1464660621"
       repo_name: "Revenge"
-    - 
-      description: "A showcase of sites that will be used to show our skills at web development, using modular website building concepts."
-      created: "2017-10-19T01:45:45Z"
-      url: "https://github.com/josuerojasrojas/Showcase"
-      languages: 
-        Python: 12.933092929194483
-        CoffeeScript: 16.159056576190245
-        HTML: 42.95112323960821
-        Shell: 1.75917352955509
-        CSS: 26.19755372545198
-      projectLink: "https://josuerojasrojas.github.io/Showcase"
-      datevalue: "1508395545"
-      repo_name: "Showcase"
     - 
       description: "Simon Game for android for Applied Science "
       created: "2016-07-12T20:41:26Z"
