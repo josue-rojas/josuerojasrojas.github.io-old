@@ -15,14 +15,34 @@ title: Home
   </div>
   <div class='info'>
     {% for content in site.data.aboutme.content %}
-      <div class='section'>
-        <h3>{{content[0]}}</h3>
-        <p>{{content[1]}}</p>
+    {% assign whichColumn = forloop.index0 | modulo:3 %}
+    {% if whichColumn == 0 %}
+    <!-- row -->
+    <div class='row'>
+    	<div class='side-col'></div>
+    {% elsif whichColumn == 1 %}
+      <div class='inner-col'> </div>
+    {% elsif whichColumn == 2 %}
+      <div class='inner-col'></div>
+    {% endif %}
+      <div class='content-col'>
+        <div class='title'><div class='title-forreal'>{{content[0]}}</div>
+      <div class='line'></div></div>
+        <!-- use to get height -->
+        <div class='content-height'>{{content[1]}}</div>
       </div>
+
+    {% if whichColumn == 2 %}
+    	<div class='side-col'></div>
+    {% endif %}
+    {% if forloop.last or whichColumn == 2 %}
+    <!-- close the row if it's the last one or the end of the row -->
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
 <script>
   // need to finish styling before showing
-  window.location='/projects'
+  // window.location='/projects'
 </script>
