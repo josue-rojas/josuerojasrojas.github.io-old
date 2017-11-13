@@ -116,5 +116,6 @@ document.addEventListener "DOMContentLoaded", ->
         console.log('total', tot)
         direction+=$(this).scrollTop()
       clearTimeout(scrollTimeOut)
-      isScrolling = false
-      scrollTimeOut = setTimeout(yesScroll, 100)
+      if tot == 5 #make sure get more than one number
+        isScrolling = false
+        scrollTimeOut = setTimeout(yesScroll, 100)
