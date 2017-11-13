@@ -27,16 +27,13 @@ document.addEventListener "DOMContentLoaded", ->
 
   # intro
   runFirst=->
-    if !isFirst
-      clearTimeout(blinkTimeout) # stop waisting precious resource, like this comment
-      return
+    # if !isFirst
+    #   clearTimeout(blinkTimeout) # stop waisting precious resource, like this comment
+    #   return
     word = ''
-    # for letter in 'Hello World...'
-    for letter in 'Redirecting...'
+    for letter in 'Hello World....'
       word+=letter
       f = (word)->
-        if word == 'Redirecting...'
-          window.location='/projects'
         $('.slide.intro .text').text(word)
       setTimeout(f, textDelay, word)
       textDelay = if letter == ' ' then textDelay+100 else textDelay+500
@@ -83,8 +80,13 @@ document.addEventListener "DOMContentLoaded", ->
            $(slides[++currSlide]).addClass('active')
            prevSlide = currSlide
         setTimeout(change, 1500)
-      # clearTimeout(scrollTimeOut)
-      # targetPos = positions.find (element)->
-      #   return element > currPos
-      # targetPos = if targetPos then targetPos else positions[positions.length-1]
-      # scrollToPos(change=.50, currPos, targetPos, true)
+        
+  window.changeTo = (slideNum) ->
+    $(slides[prevSlide]).removeClass('active')
+    currSlide = slideNum
+    change=->
+      $(slides[currSlide]).addClass('active')
+      prevSlide = currSlide
+      if currSlide == 0
+        runFirst()
+    setTimeout(change, 1500)

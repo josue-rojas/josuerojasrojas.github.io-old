@@ -14,12 +14,31 @@ custom_scss: home
     </div>
   </div>
 </div>
+<!-- quick slides -->
 <div class='slide'>
   <div class='content-wrapper'>
-    Hello
+    <div class='title'>Quick View</div>
+    {% for info in site.data.aboutme.quick-info %}
+    <div class='button-wrapper'><button class='slide-btn btn' onclick='changeTo({{info.pos}})'>{{info.title}}</button></div>
+    {% endfor %}
   </div>
 </div>
 
+<!--  real meat slides-->
+{% for content in site.data.aboutme.content %}
+<div class='slide'>
+  <div class='content-wrapper'>
+    {{ content.text }}
+    {% if content.button %}
+    <div class='button-wrapper'>
+      <a class='btn slide-btn' href='{{content.button.link}}'>{{content.button.title}}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+<!-- control and loading box -->
 <div class='loading controls'>
   <div class='control-box first'>
     <div class='control-text'>Controls</div>

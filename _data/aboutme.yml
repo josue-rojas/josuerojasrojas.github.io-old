@@ -3,11 +3,41 @@
     LinkedIn: "https://www.linkedin.com/in/josuerojasz/"
     Facebook: "https://www.facebook.com/withcheesepls"
     Instagram: "https://www.instagram.com/withcheesepls/"
+  quick-info:
+    -
+      title: 'Intro'
+      pos: 2 #includes this slide and the intro so intro is first in content but 2 here
+    -
+      title: 'School'
+      pos: 3
+    -
+      title: 'Projects Page'
+      pos: 5
+    -
+      title: "Github"
+      pos: 6
+
   content:
-    Hover: "hover to see stuff..."
-    About Me: "I am computer science major and minor in economics at CUNY Lehman Colllege. Expected to graduate in December 2017. I guess the most important thing about me is that I want to rule the world....."
-    Interest: "Some of my interest include skateboarding, stocks market, data science, and learning different things that will let me accomplishing nothing everything (albeit Socrates did say he knows that he knows nothing at all but i do not like to quote people i didnt know...)."
-    Other: "Umm I haven't style this page yet so don't pay much attention to that. Unless you are in mobile it should look fine. In the meantime check out the other links on top
-    Almost everything here was created by me or modified by me except bootstrap, jquery and such...."
-    Role Models: "My biggest role model is Malcolm X. More especifically his story of when he was in jail and he saw this dude speaking very 'intellectully' and such, he got inspired and wanted to be like him. Anyway he started to read books but realize it was hard because of his lack of vocabulary so he went and got a dictionary. He then decided to write every word in the dictionary to understand what he was reading. He became one of the most inspiring and influental speakers. (you can read his story if this seems vague, i do not want to tell you the whole story cause there is much more to be inspired by him)"
-    # Something:
+    -
+      text: "My Name is Josue Rojas. I create stuff using computers as a tool and resource. (fix sentence late no sence)"
+    -
+      text: "I atttend Lehman College and major in Computer Science"
+    -
+      text: "My interest are machine learning, data, stocks, skateboarding, and always being challenge (if not i get bored)"
+    -
+      text: "Check out some of my"
+      button:
+        link: "/projects"
+        title: 'Projects'
+    -
+      text: "or my"
+      button:
+        link: "https://github.com/josuerojasrojas"
+        title: 'GitHub'
+    # Hover: "hover to see stuff..."
+    # About Me: "I am computer science major and minor in economics at CUNY Lehman Colllege. Expected to graduate in December 2017. I guess the most important thing about me is that I want to rule the world....."
+    # Interest: "Some of my interest include skateboarding, stocks market, data science, and learning different things that will let me accomplishing nothing everything (albeit Socrates did say he knows that he knows nothing at all but i do not like to quote people i didnt know...)."
+    # Other: "Umm I haven't style this page yet so don't pay much attention to that. Unless you are in mobile it should look fine. In the meantime check out the other links on top
+    # Almost everything here was created by me or modified by me except bootstrap, jquery and such...."
+    # Role Models: "My biggest role model is Malcolm X. More especifically his story of when he was in jail and he saw this dude speaking very 'intellectully' and such, he got inspired and wanted to be like him. Anyway he started to read books but realize it was hard because of his lack of vocabulary so he went and got a dictionary. He then decided to write every word in the dictionary to understand what he was reading. He became one of the most inspiring and influental speakers. (you can read his story if this seems vague, i do not want to tell you the whole story cause there is much more to be inspired by him)"
+    # # Something:
