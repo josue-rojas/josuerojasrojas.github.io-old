@@ -1,10 +1,109 @@
+body
+  background-color: black
+.slide
+  position: absolute
+  width: 100%
+  height: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: black
+  font-size: 2rem
+  transition: height 2s
+  .content-wrapper
+    opacity: 0
+    transition: opacity 2s
+
+.slide.active
+  height: 100%
+  .content-wrapper
+    opacity: 1
+
+.intro
+  flex-direction: column
+  .intro-wrapper
+    display: flex
+
+.loading
+  height: 100%
+  width: 100%
+  z-index: 100
+  position: absolute
+  display: flex
+  progress
+    transition: all 500ms
+    width: 100%
+    bottom: 0
+    position: absolute
+  .control-box
+    transition: opacity 500ms
+    img
+      bottom: 200px
+      left: 10px
+      height: 200px
+    display: flex
+    opacity: 0
+    max-height: 200px
+    margin: auto 10px 20px auto
+    height: 100%
+    .control-text
+      font-size: 1.35rem
+      margin: auto 10px
+  .control-box:hover
+    opacity: .35
+  .control-box.first
+    opacity: .35
+.blinking
+  margin-left: 1px
+  opacity: 0
+
 .info
-  .section
-    h3
-      font-size: 18px
-    p
-      font-size: 16px
-    background-color: $darker-color
-    // border-bottom: 1px solid
-    margin: 15px 0
-    padding: 10px 15px
+  .row
+    .side-col, .content-col, .inner-col
+      text-align: center
+      position: relative
+      width: 100%
+      min-height: 1px
+      margin: 10px 0
+    .title
+      position: absolute
+      font-size: 34px
+      text-align: center
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      .title-forreal
+        transition: opacity 500ms
+      .line
+        width: 50%
+        border-bottom: 1px solid
+        transition: width 500ms
+    .content-col
+      text-align: justify
+      justify-content: center
+      background-color: $darker-color
+      .content-height
+        padding: 35px
+    .content-height
+      opacity: 0
+      transition: opacity 500ms
+    .content-col:hover
+      .title-forreal
+        opacity: 0
+      .line
+        width: 0
+      .content-height
+        opacity: 1
+    +medium-devices
+      .side-col
+        flex: 0 0 6.5%
+        max-width: 6.5%
+      .inner-col
+        flex: 0 0 6%
+        max-width: 6%
+      .content-col
+        flex: 0 0 25%
+        max-width: 25%

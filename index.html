@@ -1,9 +1,35 @@
 ---
-layout: default
+layout: nocontent
 title: Home
+coffee_custom: home
 ---
-<div class='main'>
-  <div class='heading'>
+<div class='slide intro active'>
+  <div class='content-wrapper'>
+    <div class='intro-wrapper'>
+      <div class='text'></div>
+      <div class='blinker'>_</div>
+    </div>
+    <div 'control-info'>
+    </div>
+  </div>
+</div>
+<div class='slide'>
+  <div class='content-wrapper'>
+    Hello
+  </div>
+</div>
+
+<div class='loading controls'>
+  <div class='control-box first'>
+    <div class='control-text'>Controls</div>
+    <img src='/resources/images/arrows.png'>
+  </div>
+  <progress id='loadingBar' value="0" max="100"></progress>
+</div>
+
+
+<div class='main' style='margin:0;'>
+  <!-- <div class='heading'>
     <div class='avatar-container'>
       <img class='avatar' src='{{ site.data.data.avatar_url }}&s=150'></img>
     </div>
@@ -12,17 +38,38 @@ title: Home
       <div class='github-info'>Github: <a href='https://github.com/{{ site.data.data.username }}'>{{ site.data.data.username }}</a></div>
       <a href='https://goo.gl/yFs4U6'>Resume</a>
     </div>
-  </div>
-  <div class='info'>
+  </div> -->
+
+  <div class='info' style='display:none;'>
     {% for content in site.data.aboutme.content %}
-      <div class='section'>
-        <h3>{{content[0]}}</h3>
-        <p>{{content[1]}}</p>
+    {% assign whichColumn = forloop.index0 | modulo:3 %}
+    {% if whichColumn == 0 %}
+    <!-- row -->
+    <div class='row'>
+    	<div class='side-col'></div>
+    {% elsif whichColumn == 1 %}
+      <div class='inner-col'> </div>
+    {% elsif whichColumn == 2 %}
+      <div class='inner-col'></div>
+    {% endif %}
+      <div class='content-col'>
+        <div class='title'><div class='title-forreal'>{{content[0]}}</div>
+      <div class='line'></div></div>
+        <!-- use to get height -->
+        <div class='content-height'>{{content[1]}}</div>
       </div>
+
+    {% if whichColumn == 2 %}
+    	<div class='side-col'></div>
+    {% endif %}
+    {% if forloop.last or whichColumn == 2 %}
+    <!-- close the row if it's the last one or the end of the row -->
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
 <script>
   // need to finish styling before showing
-  window.location='/projects'
+  // window.location='/projects'
 </script>
