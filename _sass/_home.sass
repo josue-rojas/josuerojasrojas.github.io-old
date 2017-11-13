@@ -1,3 +1,62 @@
+body
+  background-color: black
+.slide
+  position: absolute
+  width: 100%
+  height: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: black
+  font-size: 2rem
+  transition: height 2s
+  .content-wrapper
+    opacity: 0
+    transition: opacity 2s
+
+.slide.active
+  height: 100%
+  .content-wrapper
+    opacity: 1
+
+.intro
+  flex-direction: column
+  .intro-wrapper
+    display: flex
+
+.loading
+  height: 100%
+  width: 100%
+  z-index: 100
+  position: absolute
+  display: flex
+  progress
+    transition: all 500ms
+    width: 100%
+    bottom: 0
+    position: absolute
+  .control-box
+    transition: opacity 500ms
+    img
+      bottom: 200px
+      left: 10px
+      height: 200px
+    display: flex
+    opacity: 0
+    max-height: 200px
+    margin: auto 10px 20px auto
+    height: 100%
+    .control-text
+      font-size: 1.35rem
+      margin: auto 10px
+  .control-box:hover
+    opacity: .35
+  .control-box.first
+    opacity: .35
+.blinking
+  margin-left: 1px
+  opacity: 0
+
 .info
   .row
     .side-col, .content-col, .inner-col
