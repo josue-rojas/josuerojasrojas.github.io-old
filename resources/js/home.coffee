@@ -2,8 +2,26 @@
 ---
 # home coffee, duh...
 # NEED TO CUT OUT REPETIVENESS (MORE especifically CHANGING OF SLIDES)
-
+hasTouch = false
 document.addEventListener "DOMContentLoaded", ->
+  try
+    document.createEvent('TouchEvent')
+    hasTouch = true
+  catch error
+    hasTouch = false
+    $('.controls-box').removeClass('hasHover')
+
+  controlActive = false
+  if hasTouch
+    $('.controls').click ->
+      if !controlActive
+        $('.control-box').addClass('active')
+        controlActive = true
+      else
+        $('.control-box').removeClass('active')
+        controlActive = false
+  $('.btn').click (e)->
+    e.stopPropagation();
 
   currVal = 0
   canChange = false
@@ -62,6 +80,8 @@ document.addEventListener "DOMContentLoaded", ->
 
   # THIS FUNCION SHOULD BECOME MAIN CHANGER
   window.changeTo = (slideNum=-1, direction=0) ->
+    if !canChange
+      return
     slideNum = if slideNum != -1 then slideNum else direction + currSlide
     # if slideNum == -1
     #   slideNum = direction + currSlide

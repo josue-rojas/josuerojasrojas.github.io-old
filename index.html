@@ -40,10 +40,14 @@ custom_scss: home
 {% endfor %}
 
 <!-- control and loading box -->
-<div class='loading controls'>
-  <div class='control-box first'>
-    <div class='control-text'>Controls</div>
-    <img src='/resources/images/arrows.png'>
+<div class='loading controls '>
+  <div class='control-box first hasHover'>
+    <!-- <div class='control-text'>Controls</div> -->
+    <div class='control-img'>
+      <img src='/resources/images/up.png' onclick='changeTo(-1,-1)'>
+      <img src='/resources/images/down.png'onclick='changeTo(-1,1)'>
+      <!-- <img src='/resources/images/arrows.png'> -->
+    </div>
   </div>
   <progress id='loadingBar' value="0" max="100"></progress>
 </div>
