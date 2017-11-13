@@ -1,6 +1,7 @@
 ---
 ---
 # home coffee, duh...
+# NEED TO CUT OUT REPETIVENESS (MORE especifically CHANGING OF SLIDES)
 
 document.addEventListener "DOMContentLoaded", ->
 
@@ -53,40 +54,67 @@ document.addEventListener "DOMContentLoaded", ->
   runFirst()
   barUpdate()
 
+  # var for change slides
   slides = $('.slide')
   endSlide = slides.length-1
   prevSlide = 0
   currSlide = 0
-  $(window).keydown (e)->
-    if canChange
-      if e.which == 38
-        if currSlide == 0
-          return
-        barUpdate()
-        $(slides[prevSlide]).removeClass('active')
-        change=->
-          $(slides[--currSlide]).addClass('active')
-          prevSlide = currSlide
-          if currSlide == 0
-            runFirst()
-        setTimeout(change, 1500)
-        prevSlide = currSlide
-      else if e.which == 40
-        if currSlide == endSlide
-          return
-        barUpdate()
-        $(slides[prevSlide]).removeClass('active')
-        change=->
-           $(slides[++currSlide]).addClass('active')
-           prevSlide = currSlide
-        setTimeout(change, 1500)
-        
-  window.changeTo = (slideNum) ->
+
+  # THIS FUNCION SHOULD BECOME MAIN CHANGER
+  window.changeTo = (slideNum=-1, direction=0) ->
+    slideNum = if slideNum != -1 then slideNum else direction + currSlide
+    # if slideNum == -1
+    #   slideNum = direction + currSlide
+    #   console.log(currSlide+direction == currSlide)
+    #   console.log(direction + ' next ' + currSlide+direction + ' curr ' + currSlide)
+    console.log(slideNum)
+    if slideNum < 0
+      console.log('slideNum < 0')
+      return
+    else if slideNum == endSlide+1
+      console.log('== en+1')
+      return
+    else if prevSlide == slideNum
+      console.log('==slidenum')
+      return
+    barUpdate()
     $(slides[prevSlide]).removeClass('active')
-    currSlide = slideNum
-    change=->
+    change = (slideNum, direction)->
+      currSlide = if direction == 0 then slideNum else currSlide+direction
       $(slides[currSlide]).addClass('active')
       prevSlide = currSlide
       if currSlide == 0
         runFirst()
-    setTimeout(change, 1500)
+    setTimeout(change, 1500, slideNum, direction)
+
+  $(window).keydown (e)->
+    if canChange
+      if e.which == 38
+        changeTo(-1, -1)
+      else if e.which == 40
+        changeTo(-1, 1)
+
+  isScrolling = false
+  scrollTimeOut = ''
+  direction = 0
+  tot = 0
+  yesScroll = ->
+    console.log('directn' + direction)
+    if direction < 0
+      changeTo(-1, -1)
+    else
+      changeTo(-1, 1)
+    tot = 0
+    direction = 0
+
+
+  $(window).scroll (event)->
+    console.log($(this).scrollTop())
+    if canChange
+      if tot < 5
+        tot++
+        console.log('total', tot)
+        direction+=$(this).scrollTop()
+      clearTimeout(scrollTimeOut)
+      isScrolling = false
+      scrollTimeOut = setTimeout(yesScroll, 100)
