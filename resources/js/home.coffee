@@ -37,7 +37,7 @@ document.addEventListener "DOMContentLoaded", ->
       f = (word)->
         $('.slide.intro .text').text(word)
       setTimeout(f, textDelay, word)
-      textDelay = if letter == ' ' then textDelay+100 else textDelay+500
+      textDelay = if letter == ' ' then textDelay+50 else textDelay+300
     textDelay = 0
     blinking = false;
     blink = ->

@@ -11,33 +11,39 @@
       title: 'School'
       pos: 3
     -
-      title: 'Projects Page'
+      title: 'Skills'
       pos: 5
     -
-      title: "Github"
+      title: 'Projects Page'
       pos: 6
     -
-      title: "Resume"
+      title: "Github"
       pos: 7
+    -
+      title: "Resume"
+      pos: 8
 
   content:
     -
       text: "My Name is Josue Rojas. I create stuff using computers as a tool and resource. (fix sentence late no sence)"
     -
-      text: "I atttend Lehman College and major in Computer Science"
+      text: "I will graduate from Lehman College on December 2017 with a major of Computer Science and minor in Economics."
     -
       text: "My interest are machine learning, data, stocks, skateboarding, and always being challenge (if not i get bored)"
+    -
+      text: "I am familiar with HTML, CSS, JS, CoffeeScript, SASS, NodeJs, Python, and Java. I also know basics of photoshop and final cut pro. And if I do not know something I specialize in googling to inspire a creative solution"
     -
       text: "Check out some of my"
       button:
         link: "/projects"
         title: 'Projects'
     -
-      text: "or my"
+      text: "Sources for my projects, check out my "
       button:
         link: "https://github.com/josuerojasrojas"
         title: 'GitHub'
     -
+      text: "More precise information, check out my "
       button:
         link: "https://goo.gl/yFs4U6"
         title: 'Resume'
