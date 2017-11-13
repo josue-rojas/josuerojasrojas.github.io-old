@@ -34,9 +34,9 @@ document.addEventListener "DOMContentLoaded", ->
     # for letter in 'Hello World...'
     for letter in 'Redirecting...'
       word+=letter
-      if word == 'Redirecting...'
-        window.location='/projects'
       f = (word)->
+        if word == 'Redirecting...'
+          window.location='/projects'
         $('.slide.intro .text').text(word)
       setTimeout(f, textDelay, word)
       textDelay = if letter == ' ' then textDelay+100 else textDelay+500
