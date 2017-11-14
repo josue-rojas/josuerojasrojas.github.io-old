@@ -55,28 +55,35 @@ body
     width: 100%
     bottom: 0
     position: absolute
+    display: flex
   .control-box
-    bottom: 15px
-    right: 10px
     position: absolute
     transition: opacity 500ms
-    .control-img
-      img
-        height: 98px
-        display: block
-        &:hover
-          opacity: .8
     display: flex
     opacity: 0
-    max-height: 200px
-    height: 100%
-    .control-text
-      font-size: 1.35rem
-      margin: auto 10px
-  .control-box.hasHover:hover, .control-box.active, .control-box.first
-    opacity: .35
-  // .control-box.first
-  //   opacity: .35
+    align-content: center
+    &.hasHover:hover, &.first, &.active
+      opacity: .35
+    svg
+      height: 3rem
+      color: white
+      fill: currentColor
+      &:hover
+        opacity: .8
+    &.arrows
+      right: 0
+      margin-right: 15px
+      display: flex
+      flex-direction: column
+      svg
+        display: block
+    &.links
+      left: 0
+      margin-left: 15px
+      height: 6rem
+      display: flex
+      svg
+        margin: auto
 .blinking
   margin-left: 1px
   opacity: 0

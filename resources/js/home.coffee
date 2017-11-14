@@ -6,14 +6,15 @@ hasTouch = false
 document.addEventListener "DOMContentLoaded", ->
   try
     document.createEvent('TouchEvent')
+    $('.control-box').removeClass('hasHover')
     hasTouch = true
   catch error
     hasTouch = false
-    $('.controls-box').removeClass('hasHover')
 
   controlActive = false
   if hasTouch
     $('.controls').click ->
+      console.log('clicked')
       if !controlActive
         $('.control-box').addClass('active')
         controlActive = true
