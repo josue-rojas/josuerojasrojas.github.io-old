@@ -45,13 +45,11 @@ svg g {
   min-width: 100px;
   min-height: 100px;
   padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: table;
   text-align: center;
   margin: auto; }
   .card .card-image {
+    margin: auto;
     min-width: 125px;
     min-height: 125px;
     max-width: 125px;
@@ -73,10 +71,12 @@ svg g {
     letter-spacing: 0.1rem;
     font-weight: 200; }
   .card .social-links {
-    display: flex;
+    margin: auto;
+    display: table;
     transition: 400ms;
     justify-content: space-between; }
     .card .social-links .button {
+      display: inline-block;
       width: 25px;
       margin: 3px; }
     .card .social-links svg {
