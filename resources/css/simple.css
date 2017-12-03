@@ -5,6 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   background: black;
@@ -48,7 +49,8 @@ svg g {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  margin: auto; }
   .card .card-image {
     min-width: 125px;
     min-height: 125px;
@@ -117,6 +119,17 @@ svg g {
       border: 1px solid #05fbff; }
       .card .simple-button:hover a {
         color: #05fbff; }
+
+footer {
+  font-weight: 100;
+  margin-bottom: 3px;
+  font-size: 0.85rem; }
+  footer a {
+    color: #989DA1;
+    transition: 400ms; }
+    footer a:hover {
+      text-decoration: none;
+      color: #05fbff; }
 
 .dropdown {
   border: 1px solid #989DA1;
