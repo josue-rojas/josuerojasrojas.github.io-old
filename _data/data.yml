@@ -126,16 +126,16 @@
       datevalue: "1462405117"
       repo_name: "Migration-of-Language-and-Income"
     - 
-      description: "A showcase of sites that will be used to show our skills at web development, using modular website building concepts."
+      description: "Sets of moodulos that enables us to make sites faster by reusing code. Also the website where we offer to make the such sites."
       created: "2017-10-19T01:45:45Z"
       url: "https://github.com/josuerojasrojas/Modulos-Design"
       languages: 
-        Python: 7.33534175395926
-        CoffeeScript: 16.62751167739974
-        HTML: 42.86503966170089
-        Shell: 0.9977612559077969
-        CSS: 32.17434565103231
-      projectLink: "https://josuerojasrojas.github.io/Modulos-Design/"
+        Python: 16.87310119186726
+        CoffeeScript: 16.000623198566643
+        HTML: 35.15359248007063
+        Shell: 1.9630754849263847
+        CSS: 30.009607644569087
+      projectLink: "http://modulos-design.com"
       datevalue: "1508395545"
       repo_name: "Modulos-Design"
     - 
