@@ -81,6 +81,15 @@
       datevalue: "1480460874"
       repo_name: "DataAllocation"
     - 
+      description: "Script to export a Jekyll page along with its local files"
+      created: "2017-12-08T04:08:54Z"
+      url: "https://github.com/josuerojasrojas/export-jekyll"
+      languages: 
+        Python: 100
+      projectLink: "#"
+      datevalue: "1512724134"
+      repo_name: "export-jekyll"
+    - 
       description: "Judgement for a positive motive. "
       created: "2017-11-10T23:04:56Z"
       url: "https://github.com/josuerojasrojas/hackathonstuff2017"
@@ -93,18 +102,6 @@
       projectLink: "https://hackacthon2017.herokuapp.com"
       datevalue: "1510373096"
       repo_name: "hackathonstuff2017"
-    - 
-      description: "This is my portfolio in GitHub pages using liquid templating language(jekyll), sass, CoffeeScript, and python for getting data"
-      created: "2017-07-24T01:11:35Z"
-      url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
-      languages: 
-        Python: 9.142553310572564
-        CoffeeScript: 28.89125202888006
-        HTML: 29.82873453853473
-        CSS: 32.13746012201265
-      projectLink: "https://josuerojasrojas.github.io/"
-      datevalue: "1500876695"
-      repo_name: "josuerojasrojas.github.io"
     - 
       description: "Jukebox example using Spotify API to get song previews and also has the ability to play mp3 links for TTP project"
       created: "2017-06-12T18:06:59Z"
@@ -130,11 +127,11 @@
       created: "2017-10-19T01:45:45Z"
       url: "https://github.com/josuerojasrojas/Modulos-Design"
       languages: 
-        Python: 16.87310119186726
-        CoffeeScript: 16.000623198566643
-        HTML: 35.15359248007063
-        Shell: 1.9630754849263847
-        CSS: 30.009607644569087
+        Python: 18.01178665169949
+        CoffeeScript: 11.258398402033777
+        HTML: 37.06522277432029
+        Shell: 1.2479984152401076
+        CSS: 32.41659375670634
       projectLink: "http://modulos-design.com"
       datevalue: "1508395545"
       repo_name: "Modulos-Design"
