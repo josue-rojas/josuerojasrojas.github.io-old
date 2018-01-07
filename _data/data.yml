@@ -81,7 +81,7 @@
       datevalue: "1480460874"
       repo_name: "DataAllocation"
     - 
-      description: "Script to export a Jekyll page along with its local files"
+      description: "Script to export a Jekyll page along with its local files (css, js, images, etc)"
       created: "2017-12-08T04:08:54Z"
       url: "https://github.com/josuerojasrojas/export-jekyll"
       languages: 
@@ -127,11 +127,11 @@
       created: "2017-10-19T01:45:45Z"
       url: "https://github.com/josuerojasrojas/Modulos-Design"
       languages: 
-        Python: 18.01178665169949
-        CoffeeScript: 11.258398402033777
-        HTML: 37.06522277432029
-        Shell: 1.2479984152401076
-        CSS: 32.41659375670634
+        Python: 19.062091554729697
+        CoffeeScript: 10.73965009527109
+        HTML: 36.752594365620524
+        Shell: 1.2125411397886714
+        CSS: 32.23312284459002
       projectLink: "http://modulos-design.com"
       datevalue: "1508395545"
       repo_name: "Modulos-Design"
