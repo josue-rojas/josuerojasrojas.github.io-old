@@ -165,6 +165,17 @@
       datevalue: "1468374086"
       repo_name: "Simon"
     - 
+      description: "This is just a first idea for using react. This is meant to show or simulate stars that twinkle. "
+      created: "2018-01-08T00:15:11Z"
+      url: "https://github.com/josuerojasrojas/Stars-React"
+      languages: 
+        JavaScript: 62.146777800365925
+        HTML: 20.97987395812157
+        CSS: 16.873348241512502
+      projectLink: "http://josuerz.xyz/Stars-React/#500"
+      datevalue: "1515388511"
+      repo_name: "Stars-React"
+    - 
       description: "Mining stock names from www.google.com/finance and getting basic stat information. Basically building a database."
       created: "2017-05-10T21:35:44Z"
       url: "https://github.com/josuerojasrojas/Stock-Mining"
