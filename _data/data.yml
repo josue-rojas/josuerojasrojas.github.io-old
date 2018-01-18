@@ -103,14 +103,26 @@
       datevalue: "1510373096"
       repo_name: "hackathonstuff2017"
     - 
-      description: "this is my portfolio page but using react to build it. "
+      description: "This is my portfolio in GitHub pages using liquid templating language(jekyll), (and some react), sass, CoffeeScript, and python for getting data"
+      created: "2017-07-24T01:11:35Z"
+      url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
+      languages: 
+        Python: 6.435029250132955
+        CoffeeScript: 20.335243948078553
+        HTML: 50.609623983139315
+        CSS: 22.620102818649176
+      projectLink: "https://josuerojasrojas.github.io/"
+      datevalue: "1500876695"
+      repo_name: "josuerojasrojas.github.io"
+    - 
+      description: "this is my portfolio (index) page but using react to build it. "
       created: "2018-01-17T17:14:21Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io-react"
       languages: 
-        JavaScript: 69.79379820557216
-        HTML: 7.691904087307834
-        CSS: 22.514297707119997
-      projectLink: "http://josuerz.xyz/josuerojasrojas.github.io-react/"
+        JavaScript: 73.86286490156144
+        HTML: 3.279544623740143
+        CSS: 22.857590474698416
+      projectLink: "http://josuerz.xyz"
       datevalue: "1516227261"
       repo_name: "josuerojasrojas.github.io-react"
     - 
