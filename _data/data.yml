@@ -103,6 +103,17 @@
       datevalue: "1510373096"
       repo_name: "hackathonstuff2017"
     - 
+      description: "this is my portfolio page but using react to build it. "
+      created: "2018-01-17T17:14:21Z"
+      url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io-react"
+      languages: 
+        JavaScript: 69.79379820557216
+        HTML: 7.691904087307834
+        CSS: 22.514297707119997
+      projectLink: "http://josuerz.xyz/josuerojasrojas.github.io-react/"
+      datevalue: "1516227261"
+      repo_name: "josuerojasrojas.github.io-react"
+    - 
       description: "Jukebox example using Spotify API to get song previews and also has the ability to play mp3 links for TTP project"
       created: "2017-06-12T18:06:59Z"
       url: "https://github.com/josuerojasrojas/JukeBox"
@@ -169,10 +180,10 @@
       created: "2018-01-08T00:15:11Z"
       url: "https://github.com/josuerojasrojas/Stars-React"
       languages: 
-        JavaScript: 62.146777800365925
-        HTML: 20.97987395812157
-        CSS: 16.873348241512502
-      projectLink: "http://josuerz.xyz/Stars-React/#500"
+        JavaScript: 75.8237734927996
+        HTML: 12.59458140102514
+        CSS: 11.58164510617525
+      projectLink: "http://josuerz.xyz/Stars-React/#300"
       datevalue: "1515388511"
       repo_name: "Stars-React"
     - 
