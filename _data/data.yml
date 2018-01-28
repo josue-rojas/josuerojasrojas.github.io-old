@@ -103,6 +103,26 @@
       datevalue: "1510373096"
       repo_name: "hackathonstuff2017"
     - 
+      description: "A form made with react to send you an email using I-send-you-email-server, (front end)"
+      created: "2018-01-24T03:16:23Z"
+      url: "https://github.com/josuerojasrojas/I-send-you-email-front"
+      languages: 
+        JavaScript: 65.12343657913692
+        HTML: 2.959858555431864
+        CSS: 31.91670486543121
+      projectLink: "http://josuerz.xyz/I-send-you-email-front/"
+      datevalue: "1516781783"
+      repo_name: "I-send-you-email-front"
+    - 
+      description: "Server side to forward emails from a form, using nodemailer and gmail api for auth2"
+      created: "2018-01-22T21:46:53Z"
+      url: "https://github.com/josuerojasrojas/I-send-you-email-server"
+      languages: 
+        JavaScript: 100
+      projectLink: "#"
+      datevalue: "1516675613"
+      repo_name: "I-send-you-email-server"
+    - 
       description: "This is my portfolio in GitHub pages using liquid templating language(jekyll), (and some react), sass, CoffeeScript, and python for getting data"
       created: "2017-07-24T01:11:35Z"
       url: "https://github.com/josuerojasrojas/josuerojasrojas.github.io"
