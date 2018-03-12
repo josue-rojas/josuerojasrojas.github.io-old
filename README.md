@@ -5,11 +5,15 @@ permalink: /readme
 title: Readme
 ---
 
-Most importantly....
+
+# This is my old portfolio now. For up to date check the one [here](https://github.com/josuerojasrojas/josuerojasrojas.github.io)
+
+<!-- Most importantly....
 
 - index.html or / was build using react and the source can be found [here](https://github.com/josuerojasrojas/josuerojasrojas.github.io-react)
 - this whole folder is messy which i am going to delete a lot of things later
 - i need to redesign the /projects page cause it doesn't go with the aesthetic presented in the index.html (again going to delete a lot of things later)
+-->
 
 <!-- My attempt to make a generic portfolio which uses liquid templating language(jekyll), sass, CoffeeScript, and python for getting data.
 
